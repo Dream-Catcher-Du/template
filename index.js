@@ -6,9 +6,9 @@ const port = 3000
 app.use('/public', express.static('public'))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!');
 })
 
 app.listen(port, () => {
-  console.log(`服务器启动成功`)
+  console.log(`服务器启动成功`);
 })
