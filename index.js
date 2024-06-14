@@ -12,3 +12,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+/**
+ * 为了让Vercel将Express转变为无服务器功能，
+ * 必须导出Express应用。
+ */
+module.exports = app;
