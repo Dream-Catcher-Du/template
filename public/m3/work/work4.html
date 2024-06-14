@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="container">
+            <div class="row" style="border-bottom: 2px solid #2677e5;">
+                <div class="col-md-5">
+                    <div class="nav text-center" id="navMenu">
+                        <ul>
+                            <li data-id="22"><a href="../index.html">首页</a></li>
+                            <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                            <li data-id="210"><a href="../work/work1.html">工作活动</a></li>
+                            <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="message_container">
+                        <div class="message_notification">
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                            <span>非法违法“小化工”专项整治成效显著</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织希望应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <a class="message_more" href="../message/index.html">更多>></a>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='210']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='210']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='210']").addClass("active");
+        });
+        var topcolumId = "210";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10">
+        <div class="row">
+            <div class="mycol-md-8 col-sm-8 col-xs-12 padding-md-right-5">
+                <div class="cbw">
+                    <div class="center_Bbt">
+                        <div class="center_Pc">
+                            <a href="./content.html" target="_blank"><img src="../images/-8588831350896650808.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;<a
+                                href="./content.html" target="_blank"><img src="../images/-8588831352983213308.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;<a
+                                href="./content.html" target="_blank"><img src="../images/-8588832216193808162.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <div class="center_Bbt">
+
+                        <div class="wsd_list"> <span style="font-size:14px;">
+                                <a href="./content.html" target="_blank" style="color:#2190D0; font-weight:bold;">国际劳工组织出版的百科全书</a></span><br>
+                            <a href="./content.html" target="_blank">
+                                《职业安全卫生百科全书》是国际劳工组织组织全球职业安全卫生有关专家编写的职业安全卫生类书籍。到目前为止，已出版四个版本，第一版于1930年出版，第二版（1971年），第三版（1983年）和第四版（1998年）。
+                                目前读者正在使用的《百科全书》是第四版，它是由全世界60多个国家的1000余名一流的...</a>
+
+                        </div>
+
+                        <div class="wsd_list"> <span style="font-size:14px;">
+                                <a href="./content.html" target="_blank" style="color:#2190D0; font-weight:bold;">国际劳工标准</a></span><br>
+                            <a href="./content.html" target="_blank">
+                                《职业安全卫生国际劳工公约和建议书选编》（ILO Conventions and Recommendations on Occupational Safety and
+                                Health）于2000年6月由原国家经贸委安全生产局汇编。主要包括自1919年国际劳工组织创立至2000年间，国际劳工局制定的关于...</a>
+
+                        </div>
+
+                        <div class="wsd_list"> <span style="font-size:14px;">
+                                <a href="./content.html" target="_blank" style="color:#2190D0; font-weight:bold;">实用规程</a></span><br>
+                            <a href="./content.html" target="_blank"> ◆ 《煤矿安全与健康实用规程》 Code
+                                of Practice on Safety and Health in Coal Mines
+                                《煤矿安全与健康实用规程》是国际劳工局邀请部分产煤国政府、雇主和工会三方代表讨论制定的，中文版由原劳动人事部矿山安全监察局翻译，于1987年由原劳动人事出版社出版...</a>
+
+                        </div>
+
+                        <div class="wsd_list"> <span style="font-size:14px;">
+                                <a href="./content.html" target="_blank" style="color:#2190D0; font-weight:bold;">指南</a></span><br>
+                            <a href="./content.html" target="_blank"> ◆ 《职业安全健康管理体系导则》
+                                Guidelines on Occupational Safety and Health Management Systems (ILO-OSH 2001)
+                                《职业安全健康管理体系导则》由国际劳工组织授权，原中国国家经贸委安全科学技术研究中心根据国际劳工局出版的英...</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mycol-md-4 col-sm-4 col-xs-12 padding-md-left-5">
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">工作活动</div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="./work1.html" class="tit">项目</a>
+                            <span class="date">Projects</span>
+                        </li>
+                        <li>
+                            <a href="./work2.html" class="tit">宣传活动</a>
+                            <span class="date">Activities</span>
+                        </li>
+                        <li>
+                            <a href="./work3.html" class="tit">会议</a>
+                            <span class="date">Meetings</span>
+                        </li>
+                        <li>
+                            <a href="./work4.html" class="tit">出版物</a>
+                            <span class="date">Publications</span>
+                        </li>
+                        <li>
+                            <a href="./work5.html" class="tit">杂志</a>
+                            <span class="date">Magazines</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">相关链接</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row margin-bottom-10">
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c1.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c2.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c3.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer_msg">
+            <span>相关信息：</span>
+            <a href="../info/index.html" class="tit" target="_blank">网址导航</a>
+            <a href="../info/info1.html" class="tit" target="_blank">法律法规</a>
+            <a href="../info/info1.html" class="tit" target="_blank">管理机构</a>
+            <a href="../info/info1.html" class="tit" target="_blank">统计信息</a>
+            <a href="../info/info1.html" class="tit" target="_blank">中国批准的国际劳工公约</a>
+            <a href="../info/info1.html" class="tit" target="_blank">主要报刊</a>
+            <a href="../info/info1.html" class="tit" target="_blank">相关机构网址</a>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

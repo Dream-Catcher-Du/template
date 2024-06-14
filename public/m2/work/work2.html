@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="../index.html">首页</a></li>
+                        <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="../work/index.html">工作活动</a></li>
+
+
+
+                        <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='210']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='210']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='210']").addClass("active");
+        });
+        var topcolumId = "210";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10 padding-bottom-30">
+        <div class="row">
+            <div class="mycol-md-8 col-sm-7 col-xs-12 margin-top-10 padding-md-right-5">
+                <div class="cbw">
+                    <div class="center_Bbt">
+                        <div class="center_Pc">
+                            <a href="./work1.html"><img src="../images/-8588832870694128308.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;<a
+                                href="./work1.html"><img src="../images/-8588832878993190808.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;<a
+                                href="./work1.html"><img src="../images/-8588832881003190808.jpg"
+                                    width="164" height="109"></a>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <div class="center_Bbt">
+
+                        <div class="wsd_list">
+                            <span style="color:#2190D0; font-weight:bold;">“世界职业安全与健康日”活动</span><br>
+                            <a href="./work1.html" target="_blank">
+                                2001年，国际劳工组织宣布将每年的4月28日定为“世界职业安全与健康日”，并建议各成员国开展纪念活动。2004年以来，国家安全监管总局已连续8年和国际劳工组织共同举办了“世界职业安全与健康日”纪念活动，先后通过召开研讨会、举办展览、在有关报刊上开辟专栏等形式，宣传安全生产与职业健康政策和法规，普及...
+                            </a>
+                        </div>
+
+                        <div class="wsd_list"> <span style="color:#2190D0; font-weight:bold;">
+                                安全生产展览会活动</span><br>
+                            <a href="./work1.html" target="_blank">
+                                近年来，国家安全生产监管部门与国际劳工组织合作在北京成功举办了多次中国国际安全生产论坛和展览会。ILO-CIS中国国家中心与国际劳工组织北京局合作在展览会上设置展台，介绍国际劳工组织职业安全卫生工作、ILO和CIS出版的图书以及ILO-CIS中国国家中心负责翻译出版的国际劳工组织有关职业安全卫生领域...
+                            </a>
+
+                        </div>
+                        <div class="wsd_list"> <span style="color:#2190D0; font-weight:bold;">
+                                “安全生产月”咨询日、防灾减灾日和“科技活动周”活动</span><br>
+                            <a href="./work1.html" target="_blank">
+                                ILO-CIS中国国家中心参与了国家安全监管总局组织的“安全生产月”咨询日活动和国家科技部组织的“防灾减灾日”、“全国科技周”活动。组织编辑出版了《全民应急科普丛书》，包括《全民应急避险指南》、《公共聚集场所事故应急避险》、《地震应急避险》、《火灾应急避险》、《水灾应急避险》、《滑坡与泥石流应急避险...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mycol-md-4 col-sm-5 col-xs-12 margin-top-10 padding-md-left-5 addwen">
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">工作活动</div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="./index.html" class="tit">项目</a>
+                            <span class="date">Projects</span>
+                        </li>
+                        <li>
+                            <a href="./work2.html" class="tit">宣传活动</a>
+                            <span class="date">Activities</span>
+                        </li>
+                        <li>
+                            <a href="./work3.html" class="tit">会议</a>
+                            <span class="date">Meetings</span>
+                        </li>
+                        <li>
+                            <a href="./work4.html" class="tit">出版物</a>
+                            <span class="date">Publications</span>
+                        </li>
+                        <li>
+                            <a href="./work5.html" class="tit">杂志</a>
+                            <span class="date">Magazines</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">相关链接</div>
+
+                    <ul class="newslist">
+                        <li>
+                            <a href="../quick/quick1.html" class="tit" target="_blank">世界职业安全健康日报告</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row margin-bottom-20">
+            <div class="col-md-4">
+                <a href="../communicate/c1.html">
+                    <div class="info_view">
+                        <img src="../images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../communicate/c2.html">
+                    <div class="info_view">
+                        <img src="../images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../communicate/c3.html">
+                    <div class="info_view">
+                        <img src="../images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

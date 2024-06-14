@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/basic.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="./index.html">首页</a></li>
+                        <li data-id="216"><a href="./gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="./work/index.html">工作活动</a></li>
+                        <li data-id="168"><a href="./contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='22']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='22']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='22']").addClass("active");
+        });
+        var topcolumId = "22";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+
+    <section>
+        <div class="container padding-bottom-30">
+            <div class="row">
+                <div class="mycol-md-8 col-sm-7 col-xs-12  padding-md-right-5">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 padding-md-right-5 margin-top-10">
+                            <!-- 资讯中心 -->
+                            <style>
+                                .myswiper-banner {
+                                    width: 100%;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+
+                                .myswiper-banner .swiper-slide {
+                                    text-align: center;
+                                    font-size: 18px;
+                                    background: #fff;
+                                    /* Center slide text vertically */
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    -webkit-justify-content: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    -webkit-align-items: center;
+                                    align-items: center;
+                                }
+
+                                .myswiper-banner .swiper-slide img {
+                                    display: block;
+                                    width: 100%;
+                                }
+
+                                .myswiper-banner .swiper-pagination .swiper-pagination-bullet {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 2px;
+                                    margin: 0 2px;
+                                    text-align: center;
+                                    line-height: 16px;
+                                    font-size: 12px;
+                                }
+
+                                .myswiper-banner .title {
+                                    position: absolute;
+                                    bottom: 0px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    color: #fff;
+                                    background: rgba(0, 0, 0, .5);
+                                    width: 100%;
+                                    text-align: left;
+                                    padding: 0 90px 0 12px;
+                                    font-size: 15px;
+                                }
+
+                                .myswiper-banner .swiper-pagination {
+                                    text-align: right;
+                                    padding-right: 5px;
+                                    bottom: 14px;
+                                }
+
+                                .myswiper-banner .swiper-pagination-bullet {
+                                    background: #444444;
+                                    opacity: 1;
+                                    color: #ddd;
+                                }
+
+                                .myswiper-banner .swiper-pagination-bullet-active {
+                                    background: #ff6600;
+                                    color: #fff;
+                                }
+
+                                @media(min-width:992px) {
+                                    .myswiper-banner .swiper-slide img {
+                                        height: 275px;
+                                    }
+                                }
+
+                                @media(max-width:728px) {
+                                    .myswiper-banner .swiper-slide img {
+                                        display: block;
+                                        min-height: 180px;
+                                        width: 100%;
+                                    }
+                                }
+                            </style>
+
+
+                            <!-- Swiper -->
+                            <div class="bd-gray padding-2">
+                                <div class="myswiper-container myswiper-banner">
+                                    <div class="swiper-wrapper imgae-same-size">
+                                        <!--BANNER循环-->
+                                        <a class="display-block swiper-slide" href="/news/1369.cshtml">
+                                            <img src="./images/-8588850719604619558.gif" />
+                                        </a>
+                                        <a class="display-block swiper-slide" href="/news/1368.cshtml">
+                                            <img src="./images/-8588850719604150808.gif" />
+                                        </a>
+                                        <a class="display-block swiper-slide" href="/news/1367.cshtml">
+                                            <img src="./images/-8588850719603838308.gif" />
+                                        </a>
+                                        <!--BANNER循环 end-->
+
+                                    </div>
+                                    <!-- Add Pagination -->
+
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+
+                            <script>
+                                var myswiper = new Swiper('.myswiper-banner', {
+                                    effect: 'slider',
+                                    loop: true,
+                                    paginationClickable: true,
+                                    autoplay: {
+                                        delay: 3000,
+                                        disableOnInteraction: false,
+                                    },
+                                    pagination: {
+                                        el: '.myswiper-banner .swiper-pagination',
+                                        delay: 3000,
+                                        clickable: true,
+                                        renderBullet: function (index, className) {
+                                            return '<span class="' + className + '">' + (index + 1) + '</span>';
+                                        }
+                                    },
+
+                                });
+
+                                //鼠标滑过pagination控制swiper切换
+                                for (i = 0; i < myswiper.pagination.bullets.length; i++) {
+                                    myswiper.pagination.bullets[i].onmouseover = function () {
+                                        this.click();
+                                    };
+                                }
+
+                            </script>
+
+                        </div>
+
+                        <div class="col-md-7 col-sm-12 padding-md-left-5 margin-top-10">
+                            <div class="bd-gray padding-2  padding-bottom-8">
+                                <!-- 资讯中心 -->
+                                <div class="index-yaowen">最新消息 <a class="more" href="./message/index.html" target="_blank">更多>></a>
+                                </div>
+                                <div id="review_box" style="height: 240px; overflow: hidden;">
+                                    <ul class="newslist" id="comment1">
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                全国消防行业职业技能大赛在江苏南京举行
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                非法违法“小化工”专项整治成效显著
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                国际劳工组织希望应对未来的紧急情况
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                全国消防行业职业技能大赛在江苏南京举行
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <a class="tit" href="./message/msg1.html" target="_blank">
+                                                国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点
+                                            </a>
+                                            <span class="date">
+                                                2021-10-28
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <ul id="comment2" class="newslist"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            window.onload = roll(40);
+
+                            function roll(t) {
+                                var ul1 = document.getElementById("comment1");
+                                var ul2 = document.getElementById("comment2");
+                                var ulbox = document.getElementById("review_box");
+                                ul2.innerHTML = ul1.innerHTML;
+                                ulbox.scrollTop = 0; // 开始无滚动时设为0
+                                var timer = setInterval(rollStart, t); // 设置定时器，参数t用在这为间隔时间（单位毫秒），参数t越小，滚动速度越快
+                                // 鼠标移入div时暂停滚动
+                                ulbox.onmouseover = function () {
+                                    clearInterval(timer);
+                                }
+                                // 鼠标移出div后继续滚动
+                                ulbox.onmouseout = function () {
+                                    timer = setInterval(rollStart, t);
+                                }
+                            }
+
+                            // 开始滚动函数
+                            function rollStart() {
+                                // 上面声明的DOM对象为局部对象需要再次声明
+                                var ul1 = document.getElementById("comment1");
+                                var ul2 = document.getElementById("comment2");
+                                var ulbox = document.getElementById("review_box");
+                                // 正常滚动不断给scrollTop的值+1,当滚动高度大于列表内容高度时恢复为0
+                                if (ulbox.scrollTop >= ul1.scrollHeight) {
+                                    ulbox.scrollTop = 0;
+                                } else {
+                                    ulbox.scrollTop += 1;
+                                }
+                            }
+                        </script>
+
+                    </div>
+                    <div class="headline-title">简介</div>
+                    <div class="info-content-box">
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;1、1984年5月，劳动人事部劳动保护局与劳动保护科学研究所共同筹建了中国劳动安全卫生情报中心，其宗旨是：通过收集、加工、馆藏和传播国内外职业安全卫生信息，为预防或减少工矿企业工伤事故与职业病，保护劳动者在生产过程中的安全与健康服务；为国家在制定职业安全卫生法律和决策时提供宏观上的服务。中国劳动安全卫生情报中心于1987年被ILO-CIS正式接纳为成员单位，ILO-CIS在其出版的《劳动安全卫生通讯》（1988年第一期）上作了报道。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            随着形势的发展，国内又相继建立了ILO-CIS中国国家中心的分中心，即：全国总工会职业安全卫生信息与培训中心（1990年）；煤炭安全信息与培训中心（1994年）。</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            在ILO-CIS中国国家中心的建设时期，ILO-CIS总部的J•Takala先生和E•Clevenstine先生曾先后来中心访问，并指导工作。ILO-CIS德国国家中心的专家对ILO-CIS中国国家中心的初期建设也给予了很多帮助。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            经过几年的发展，ILO-CIS中国国家中心藏书已达万余册，其中50%为外文图书（主要是英、俄、日文）。拥有各种期刊720余种，其中外文期刊300余种（主要是英、俄、日、法、德文期刊），中文期刊400余种，中外文摘刊物近20种。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            2、1991年5月，根据劳动部决定，以劳动部机关图书馆、劳动保护科学研究所情报室、劳动科学研究所情报室、劳动工资研究所资料室、国际劳工研究所资料室等单位的书刊文献资源、情报业务和部分人员为基础，组建劳动部劳动情报文献中心。该中心对外联络名称仍为ILO-CIS中国国家中心。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;随着机构的变化和办公地址由西坝河迁移至惠新西街，新的中心已拥有近2000平方米的工作场所，其中包括阅览室、地下书库等。馆藏图书、文献、期刊约10万册，包括中外文图书3万余册，中外文期刊千余种，法规、标准、会议资料、科研报告等数万件；ILO-CIS劳动安全卫生信息缩微平片数千张及CD-ROM阅读系统和缩微平片阅读复制系统。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp; 3、1996年，劳动部劳动情报文献中心与国际劳工研究所合并更名为国际劳工与信息研究所，ILO-CIS中国国家中心对外联系名称和业务不变。</p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            4、1998年，由于政府机构改革，将国际劳工与信息研究所内设的“安全卫生情报室”和“编译报导咨询室”合并到新组建的国家经贸委安全科学技术研究中心，作为该中心的信息室。主要负责组织和参与国内外职业安全卫生信息交流合作与传播工作；收集、加工及馆藏国内外职业安全卫生方面的各类文献、国际劳工组织有关职业安全卫生文献和国际劳工标准等资料。对外名称仍为ILO-CIS中国国家中心，并负责与ILO-CIS总部的联络工作等。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            5、随着我国安全生产管理机构的变化，国家经贸委安全科学技术研究中心，又隶属于国家安全生产监督管理部门。2005年，安全科学技术研究中心更名为中国安全生产科学研究院。信息部是中国安全生产科学研究院的一个业务部门，对外名称仍为ILO-CIS中国国家中心。&nbsp;
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mycol-md-4 col-sm-5 col-xs-12 margin-top-10 padding-md-left-5 addwen">
+                    <div class="bd-gray index-xinxidaodu">
+
+                        <div class="index-yaowen">快速链接 <a class="more" href="./quick/index.html" target="_blank">更多>></a> </div>
+
+                        <ul class="newslist">
+
+                            <li>
+                                <a href="./quick/quick1.html" class="tit" target="_blank">国际劳工组织</a>
+                                <span class="date">ILO</span>
+                            </li>
+                            <li>
+                                <a href="./quick/quick1.html" class="tit" target="_blank">国际劳工组织工作安全局</a>
+                                <span class="date">ILO SafeWork</span>
+                            </li>
+                            <li>
+                                <a href="./quick/index.html" class="tit" target="_blank">国际职业安全卫生信息中心</a>
+                                <span class="date">ILO-CIS</span>
+                            </li>
+                            <li>
+                                <a href="./quick/quick1.html" class="tit" target="_blank">国际劳工组织北京局</a>
+                                <span class="date">ILO Beijing Office</span>
+                            </li>
+                            <li>
+                                <a href="./quick/index.html" class="tit" target="_blank">世界卫生组织</a>
+                                <span class="date">WHO</span>
+                            </li>
+                            <li>
+                                <a href="./quick/quick1.html" class="tit" target="_blank">国际标准化组织</a>
+                                <span class="date">ISO</span>
+                            </li>
+                            <li>
+                                <a href="./quick/index.html" class="tit" target="_blank">国外机构和组织网址</a>
+                                <span class="date">International Organizations</span>
+                            </li>
+                            <li>
+                                <a href="./quick/quick1.html" class="tit" target="_blank">全球职业安全卫生期刊</a>
+                                <span class="date">International Periodicals</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-gray index-xinxidaodu">
+
+                        <div class="index-yaowen">相关信息</div>
+
+                        <ul class="newslist">
+
+                            <li>
+                                <a href="./info/index.html" class="tit" target="_blank">网址导航</a>
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">法律法规</a>
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">管理机构</a>
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">统计信息</a>
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">中国批准的国际劳工公约</a>
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">主要报刊</a>
+
+                            </li>
+                            <li>
+                                <a href="./info/info1.html" class="tit" target="_blank">相关机构网址</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row margin-bottom-20">
+            <div class="col-md-4">
+                <a href="./communicate/c1.html" target="_blank">
+                    <div class="info_view">
+                        <img src="./images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communicate/c2.html" target="_blank">
+                    <div class="info_view">
+                        <img src="./images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communicate/c3.html" target="_blank">
+                    <div class="info_view">
+                        <img src="./images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

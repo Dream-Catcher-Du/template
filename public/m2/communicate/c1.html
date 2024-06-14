@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="../index.html">首页</a></li>
+                        <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="../work/index.html">工作活动</a></li>
+                        <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var $navToggle = $("#navToggle");
+        var $maskBg = $("#maskBg");
+        var $navMenu = $("#navMenu");
+
+        $navToggle.on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $maskBg.on("click", function () {
+            $maskBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        // $navMenu.children("ul").find("li").InitNav(2297, 47);
+
+        //搜索
+        $(".s-btn").on("click", function () {
+            var keyword = $(this).parents(".ss-box").find(".s-input").val();
+            if (keyword != "") {
+                location.href = "/Search/?kw=" + keyword;
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            var key = event.which;
+            if (key == 13) {
+                var keyword = $(this).parents(".ss-box").find(".s-input").val();
+                if (keyword != "") {
+                    location.href = "/Search/?kw=" + keyword;
+                }
+            }
+        });
+
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="cbw_zjym">
+                    <p>
+                        <br type="_moz">
+                        <span style="font-size: 16px"><strong><img alt="" src="../images/120530134712360.gif"
+                                    style="width: 67px; height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                CIS 通讯</strong></span>
+                    </p>
+                    <p align="center">
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp; <span style="color: #800000"><strong>《CIS通讯（CIS
+                                Newsletter）》</strong></span>是国际劳工组织职业安全卫生信息中心（ILO-CIS）主办的刊物，由英国CIS国家中心的前负责人Sheila
+                        Pantry女士及工作团队编辑制作。该通讯每月出版一期，以前是以电子邮件的形式进行传播，现在发布到互联网上。</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;
+                        《CIS通讯》不是国际劳工组织（ILO）的正式出版物，但它包含了CIS各国国家中心的职业安全卫生信息以及其他信息资源。这些信息对职业安全健康工作者很有帮助，它使读者能够及时了解各国职业安全卫生工作动态、最新出版物和重要会议以及活动，同时，还可以加强CIS国家中心之间的相互联系。
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp; 《CIS通讯》经历了23年的发展，通过CIS网络向154个国家传递着职业安全卫生方面的信息，是了解全球职业安全卫生工作的重要参考资源。</p>
+                    <p>
+                        &nbsp;</p>
+                    <p align="left">
+                        &nbsp;&nbsp;&nbsp; 《CIS通讯》内容包括： ILO最新新闻、CIS信息、来自世界各地的OSH新闻、事件纪要、职业安全卫生与环境网址等。</p>
+                    <p align="left">
+                        &nbsp;</p>
+                    <p>
+                        <strong><span style="color: #800000">&nbsp;&nbsp;&nbsp; 欲想了解详情，请点击：</span></strong><a
+                            href="http://www.sheilapantry.com/cis/index.html"><span
+                                style="color: #0000cd">http://www.sheilapantry.com/cis/index.html</span></a>
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.sheilapantry.com/oshworld/"><span
+                                style="color: #0000cd">http://www.sheilapantry.com/oshworld/</span></a></p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">相关信息</div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="../info/index.html" class="tit">网址导航</a>
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">法律法规</a>
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">管理机构</a>
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">统计信息</a>
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">中国批准的国际劳工公约</a>
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">主要报刊</a>
+
+                        </li>
+                        <li>
+                            <a href="../info/info1.html" class="tit">相关机构网址</a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    var $subNav = $("#subNav");
+                    $subNav.children("ul").find("li").InitNav(2297);//初始化响应式菜单
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

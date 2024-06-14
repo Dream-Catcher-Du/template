@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/basic.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="./index.html">首页</a></li>
+                        <li data-id="216"><a href="./gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="./work/work1.html">工作活动</a></li>
+                        <li data-id="167"><a href="./info/index.html">相关信息</a></li>
+                        <li data-id="45"><a href="./quick/index.html">快速链接</a></li>
+                        <li data-id="243"><a href="./communicate/index.html">通讯</a></li>
+                        <li data-id="168"><a href="./contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='243']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='243']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='243']").addClass("active");
+        });
+        var topcolumId = "243";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-bottom-20">
+        <div class="row">
+            <div class="mycol-md-8 col-sm-7 col-xs-12 margin-top-10 padding-md-right-5">
+                <div class="bd-gray padding-10">
+
+                    <ul class="breadcrumb">
+                        <li><a href="http://t8415.mbdemo.18inter.com/"><span
+                                    class="fa fa-home margin-right-8"></span>首页</a></li>
+                        <li><a href="/pmfw/">便民服务</a></li>
+                    </ul>
+                    <ul class="newslist newslist-2">
+                        <li>
+                            <a class="tit" href="/news/1383.cshtml">
+                                <span class="text-blue margin-right-10">[户籍护照]</span>70年历程背后，有艰辛、有辉煌
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+                        <li>
+                            <a class="tit" href="/news/1382.cshtml">
+                                <span class="text-blue margin-right-10">[生育收养]</span>更有无数为共和国奉献一生的人
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+                        <li>
+                            <a class="tit" href="/news/1381.cshtml">
+                                <span class="text-blue margin-right-10">[生育收养]</span>一个有前途的国家不能没有先锋
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+                        <li>
+                            <a class="tit" href="/news/1380.cshtml">
+                                <span class="text-blue margin-right-10">[生育收养]</span>共和国的旗帜是用英烈的鲜血染红的
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+                        <li>
+                            <a class="tit" href="/news/1379.cshtml">
+                                <span class="text-blue margin-right-10">[生育收养]</span>一个有希望的民族不能没有英雄
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+                        <li>
+                            <a class="tit" href="/news/1378.cshtml">
+                                <span class="text-blue margin-right-10">[生育收养]</span>对外我们则始终奉行独立自主的和平外交政策
+                            </a>
+                            <span class="date">
+                                2019-10-07
+                            </span>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="text-center padding-20">
+                        <ul class="pagination">
+                            <li class="disabled">
+                                <a>&laquo;</a>
+                            </li>
+                            <li class=active><a href="/pmfw/">1</a></li>
+                            <li class="disabled">
+                                <a>&raquo;</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mycol-md-4 col-sm-5 col-xs-12 margin-top-10 padding-md-left-5">
+
+
+                <div class="bd-gray padding-2 left-title">
+                    <div class="index-comtitle-2 text-blue">
+                        <img class="margin-right-2 margin-left-2" src="/Templates/T8415/images/5707310a_17.png"
+                            alt="Alternate Text" /> 便民服务
+                    </div>
+                    <div class="left-nav">
+                        <ul>
+                            <li data-id="250"><a href="/ylws1/">医疗卫生</a></li>
+                            <li data-id="244"><a href="/sysy/">生育收养</a></li>
+                            <li data-id="251"><a href="/jtjs/">交通驾驶</a></li>
+                            <li data-id="245"><a href="/hjhz/">户籍护照</a></li>
+                            <li data-id="246"><a href="/rxjy/">入学教育</a></li>
+                            <li data-id="247"><a href="/ldjy/">劳动就业</a></li>
+                            <li data-id="248"><a href="/hysy/">婚姻生育</a></li>
+                            <li data-id="249"><a href="/tdfc/">土地房产</a></li>
+                            <li data-id="252"><a href="/lycj/">旅游出境</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bd-gray margin-top-10">
+                    <img style="width:100%;" src="/Templates/T8415/images/g8.jpg" alt="Alternate Text" />
+                </div>
+                <div class="bd-gray padding-2 index-chaxun margin-top-10">
+                    <div class="index-comtitle-2 text-red">
+                        <span class="fa fa-paper-plane margin-right-8"></span>网上查询
+                    </div>
+                    <div class="row padding-bottom-20 padding-left-20 padding-right-20">
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/5707310a_13.png" />
+                            <p class="margin-top-8"><a href="http://www.12333sb.com/" target="_blank">公积金</a></p>
+                        </div>
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/5707310a_14.png" />
+                            <p class="margin-top-8"><a href="http://www.12333sb.com/" target="_blank">社保</a></p>
+                        </div>
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/5707310a_15.png" />
+                            <p class="margin-top-8"><a href="http://www.weizhang8.cn/" target="_blank">交通违章</a></p>
+                        </div>
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/5707310a_16.png" />
+                            <p class="margin-top-8"><a href="http://www.12333sb.com/" target="_blank">人事档案</a></p>
+                        </div>
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/5707310a_17.png" />
+                            <p class="margin-top-8"><a href="https://www.8684.cn/" target="_blank">公交查询</a></p>
+                        </div>
+                        <div class="col-xs-4 text-center margin-top-20">
+                            <img src="/Templates/T8415/images/g12.png" />
+                            <p class="margin-top-8"><a href="http://www.12333sb.com/" target="_blank">职称查询</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <script>
+                    $subnav = $(".nav-menu");
+                    $subnav.find("li[data-id='243']").addClass("active");
+                    var $navli = $(".nav-menu li");
+                    $navli.mouseenter(function () {
+                        $subnav.find("li[data-id='243']").removeClass("active");
+                        $this = $(this);
+                        $this.addClass("active").siblings("li").removeClass("active");
+                    })
+                    $navli.mouseleave(function () {
+                        $this = $(this);
+                        $this.removeClass("active");
+                        $subnav.find("li[data-id='243']").addClass("active");
+                    })
+                </script>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

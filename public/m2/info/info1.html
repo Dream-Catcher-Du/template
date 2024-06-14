@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="../index.html">首页</a></li>
+                        <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="../work/index.html">工作活动</a></li>
+                        
+                        
+                        
+                        <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='167']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='167']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='167']").addClass("active");
+        });
+        var topcolumId = "167";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10 padding-bottom-30">
+        <div class="row">
+            <div class="mycol-md-8 col-sm-7 col-xs-12  padding-md-right-5">
+                <div class="cbw">
+                    <div class="cbw_Bbt">
+                        <div class="cbw_zjym">
+                            <p>
+                                <strong><span style="font-size: 14px">主要法律</span></strong>
+                            </p>
+                            <p>
+                                <strong><span style="font-size: 14px">&nbsp;</span></strong><span
+                                    style="font-size: 14px">&nbsp;<img alt=""
+                                        src="ckfinder/userfiles/images/120530100807829.jpg"
+                                        style="width: 15px; height: 10px">
+                                    <font color="#6699cc">&nbsp;&nbsp;</font><span
+                                        style="font-size: 12px"><span><span><a href="#特种设备安全法"><span
+                                                        style="color: #6699cc">特种设备安全法&nbsp;</span></a></span></span><span
+                                            style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span></span></span></span>
+                                </span><span style="color: #6699cc"><span><span><span style="font-size: 12px"><img
+                                                    alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp;&nbsp;</span></span></span></span><span
+                                    style="font-size: 12px"><span><span><a href="#安全生产法"><span
+                                                    style="color: #6699cc">安全生产法（新修订）&nbsp;</span></a></span></span><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #6699cc"><span><span>&nbsp;&nbsp; <img
+                                                    alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp;&nbsp;</span></span></span><a
+                                        href="#劳动合同法"><span
+                                            style="color: #6699cc"><span><span>劳动合同法</span></span></span></a></span><span
+                                    style="color: #6699cc"><span><span><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp;
+                                            </span></span></span></span><span style="font-size: 12px"><span><span><a
+                                                href="#矿山安全法"><span
+                                                    style="color: #6699cc">矿山安全法</span></a></span></span><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;<img alt=""
+                                                    src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp; </span></span></span><a
+                                        href="#消防法"><span
+                                            style="color: #6699cc"><span><span>消防法</span></span></span></a></span><span
+                                    style="color: #6699cc"><span><span><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp;
+                                            </span></span></span></span><span style="font-size: 12px"><span><span><a
+                                                href="#职业病防治法"><span
+                                                    style="color: #6699cc">职业病防治法</span></a></span></span><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;<img alt=""
+                                                    src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp; </span></span></span><a
+                                        href="#突发事件应对法"><span
+                                            style="color: #6699cc"><span><span>突发事件应对法</span></span></span></a></span><span
+                                    style="color: #6699cc"><span><span><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;<img alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp;
+                                            </span></span></span></span><span style="font-size: 12px"><a
+                                        href="#劳动法"><span
+                                            style="color: #6699cc"><span><span>劳动法</span></span></span></a><span
+                                        style="color: #6699cc"><span><span><a
+                                                    href="#劳动法">&nbsp;&nbsp;</a></span></span></span><span
+                                        style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #6699cc"><span><span>&nbsp;&nbsp; <img
+                                                    alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">&nbsp; </span></span></span><a
+                                        href="#刑法"><span
+                                            style="color: #6699cc"><span><span>刑法</span></span></span></a></span><span
+                                    style="font-size: 12px"><span style="font-size: 12px"><span
+                                            style="color: #6699cc"><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span></span>
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                <span style="font-size: 14px"><strong>主要行政法规</strong></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #6699cc">&nbsp;<strong>
+                                            <font size="3">&nbsp; <img alt=""
+                                                    src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                    style="width: 15px; height: 10px">
+                                                <font color="#6699cc">
+                                                    <font size="3">&nbsp;</font>
+                                                </font>
+                                            </font>
+                                        </strong>
+                                        <font size="3">
+                                            <font color="#6699cc">
+                                                <font size="3"><span style="font-size: 12px"><a
+                                                            href="#突发事件应急预案管理办法"><span
+                                                                style="color: #6699cc">突发事件应急预案管理方法</span></a></span>
+                                                </font>
+                                            </font>
+                                        </font><strong>
+                                            <font size="3">
+                                                <font color="#6699cc">
+                                                    <font size="3">&nbsp;</font>
+                                                </font>
+                                            </font>
+                                        </strong>
+                                        <font color="#6699cc"><span style="font-size: 12px">
+                                                <font color="#6699cc"><strong>
+                                                        <font size="3">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                                alt=""
+                                                                src="ckfinder/userfiles/images/120530100807829.jpg"
+                                                                style="width: 15px; height: 10px"></font>
+                                                    </strong>
+                                                    <font size="3">&nbsp; </font><span style="font-size: 12px"><a
+                                                            href="#铁路安全管理条例"><span
+                                                                style="color: #6699cc">铁路安全管理条例</span></a></span>
+                                                </font>
+                                            </span></font>
+                                    </span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #6699cc">&nbsp;&nbsp; <img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a href="#煤矿安全监察条例"><span
+                                            style="color: #6699cc">煤矿安全监察条例</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span><span style="font-size: 12px"><span style="color: #6699cc"><img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a
+                                        href="#民用爆炸物品安全管理条例"><span
+                                            style="color: #6699cc">民用爆炸物品安全管理条例</span></a></span><span
+                                    style="color: #6699cc"><span
+                                        style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+                            </p>
+                            <p>
+                                <span style="color: #6699cc"><span style="font-size: 12px">&nbsp; &nbsp;<img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span></span><span
+                                    style="font-size: 12px"><a href="#关于预防煤矿生产安全事故的特别规定"><span
+                                            style="color: #6699cc">关于预防煤矿生产安全事故的特别规定</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;</span></span><span style="font-size: 12px"><span
+                                        style="color: #6699cc"><img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a href="#特种设备安全监察条例"><span
+                                            style="color: #6699cc">特种设备安全监察条例</span></a></span><span
+                                    style="color: #6699cc"><span
+                                        style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+                            </p>
+                            <p>
+                                <span style="color: #6699cc"><span style="font-size: 12px">&nbsp;&nbsp; <img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span></span><span
+                                    style="font-size: 12px"><a href="#建设工程安全生产管理条例"><span
+                                            style="color: #6699cc">建设工程安全生产管理条例</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span><span style="font-size: 12px"><span style="color: #6699cc"><img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a
+                                        href="#农业机械安全监督管理条例"><span
+                                            style="color: #6699cc">农业机械安全监督管理条例</span></a></span><span
+                                    style="color: #6699cc"><span
+                                        style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;</span></span>
+                            </p>
+                            <p>
+                                <span style="color: #6699cc"><span style="font-size: 12px">&nbsp;&nbsp; <img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span></span><span
+                                    style="font-size: 12px"><a href="#危险化学品安全管理条例"><span
+                                            style="color: #6699cc">危险化学品安全管理条例</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+                                    style="font-size: 12px"><span style="color: #6699cc"><img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a
+                                        href="#国务院关于特大安全事故行政责任追究的规定"><span
+                                            style="color: #6699cc">国务院关于特大安全事故行政责任追究的规定</span></a></span>
+                            </p>
+                            <p>
+                                <span style="color: #6699cc"><span style="font-size: 12px">&nbsp;&nbsp;&nbsp;<img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span></span><span
+                                    style="font-size: 12px"><a href="#烟花爆竹安全管理条例"><span
+                                            style="color: #6699cc">烟花爆竹安全管理条例</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <img alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a href="#工伤保险条例"><span
+                                            style="color: #6699cc">工伤保险条例</span></a></span>
+                            </p>
+                            <p>
+                                <span style="color: #6699cc"><span style="font-size: 12px">&nbsp;&nbsp;&nbsp;<img alt=""
+                                            src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span></span><span
+                                    style="font-size: 12px"><a href="#安全生产许可证条例"><span
+                                            style="color: #6699cc">安全生产许可证条例</span></a><span
+                                        style="color: #6699cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <img alt="" src="ckfinder/userfiles/images/120530100807829.jpg"
+                                            style="width: 15px; height: 10px">&nbsp; </span><a
+                                        href="#生产安全事故报告和调查处理条例"><span
+                                            style="color: #6699cc">生产安全事故报告和调查处理条例</span></a></span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;</p>
+                            <h3>
+                                <span style="font-size: 14px">主要法律</span>
+                            </h3>
+                            <p>
+                                &nbsp;<a name="特种设备安全法"></a><span style="font-size: 8px"><strong>◆</strong></span> <span
+                                    style="font-size: 12px"><strong>特种设备安全法</strong></span></p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #800000">发布时间：</span>2013年6月29日</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #800000">实施时间：</span>2014年1月1日</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #800000">发布单位：</span>全国人民代表大会</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span style="color: #800000">摘要：</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><span
+                                        style="color: #800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span>其内容包括：总则；生产、经营、使用；一般规定；生产；经营；使用；检验、检测；监督管理；事故应急救援与调查处理；法律责任；附则等八章。</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    制定本法的目的是为了加强特种设备安全工作，预防特种设备事故，保障人身和财产安全，促进经济社会发展。</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    特种设备的生产（包括设计、制造、安装、改造、修理）、经营、使用、检验、检测和特种设备安全的监督管理，适用本法。本法所称特种设备，是指对人身和财产安全有较大危险性的锅炉、压力容器（含气瓶）、压力管道、电梯、起重机械、客运索道、大型游乐设施、场（厂）内专用机动车辆，以及法律、行政法规规定适用本法的其他特种设备。</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><strong>&nbsp;</strong></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 12px"><strong>&nbsp;</strong></span>
+                            </p>
+                            <h3>
+                                <a name="安全生产法"></a><span style="font-size: 8px"><strong>◆</strong></span> <span
+                                    style="font-size: 12px"><strong>安全生产法（新修订）</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2002年6月29日
+                            </p>
+                            <p>
+                                <span style="color: #800000"><span style="color: #800000">实施时间：</span>2002年11月1日</span>
+                            </p>
+                            <p>
+                                <span style="color: #800000">修订时间：</span>2014年8月31日
+                            </p>
+                            <p>
+                                <span style="color: #800000"><span style="color: #800000">实施时间：</span>2014年12月1日</span>
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                <span style="color: #800000"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </strong></span>其内容包括：总则；生产经营单位的安全生产保障；从业人员的安全生产权利和义务；安全生产的监督管理；生产安全事故的应急救援与调查处理；法律责任；附则等七章。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了加强安全生产工作，防止和减少生产安全事故，保障人民群众生命和财产安全，促进经济社会持续健康发展。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                凡是在中华人民共和国领域内从事生产经营活动均适用本法；有关法律、行政法规对消防安全和道路交通安全、铁路交通安全、水上交通安全、民用航空安全以及核与辐射安全、特种设备安全另有规定的，适用其规定。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="矿山安全法"></a><span style="font-size: 12px"><span
+                                        style="font-size: 8px"><strong>◆</strong></span> <strong>矿山安全法</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>1992年11月7日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>1993年5月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                <span
+                                    style="color: #800000"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>其内容包括：总则；矿山建设的安全保障；矿山开采的安全保障；矿山企业的安全管理；矿山安全的监督和管理；矿山事故处理；法律责任；附则等八章。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了保障矿山生产安全，防止矿山事故，保护矿山职工人身安全，促进采矿业的发展。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;凡是在中华人民共和国领域和管辖的其他海域从事矿产资源开采活动的任何公民、法人或者其他组织必须遵守《矿山安全法》。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="职业病防治法"></a><span style="font-size: 12px"><span
+                                        style="font-size: 8px"><strong>◆</strong></span> <strong>职业病防治法</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2001年10月27日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2002年5月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《职业病防治法》于2011年12月31日进行了修正，修改后的法律自修正之日起实施，其内容包括：总则；前期预防；劳动过程中的防护与管理；职业病诊断与职业病病人保障；监督检查；法律责任；附则等七章。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了预防、控制和消除职业病危害，预防职业病，保护劳动者健康及其相关利益，促进经济发展。</p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="劳动法"></a><span style="font-size: 12px"><span
+                                        style="font-size: 8px"><strong>◆</strong></span> <strong>劳动法</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>1994年7月5日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>1995年1月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其内容包括：总则；促进就业；劳动合同和集体合同；工作时间和休息休假；工资、劳动安全卫生、女职工和未成年工特殊保护；社会保险和福利；劳动争议；监督检查；法律责任；附则等十三章。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制定本法的目的是为了保护劳动者的合法权益，调整劳动关系，建立和维护适应社会主义市场经济的劳动制度，促进经济发展和社会进步。在中国境内的企业、个体经济组织（以下统称用人单位）和与之形成劳动关系的劳动者，适用《劳动法》。国家机关、事业组织、社会团体和与之建立劳动合同关系的劳动者，依照《劳动法》执行。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="劳动合同法"></a><span style="font-size: 8px"><strong>◆</strong></span> <span
+                                    style="font-size: 12px"><strong>劳动合同法</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2007年6月29日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2008年1月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                其主要内容包括：总则；劳动合同的订立；劳动合同的履行和变更；劳动合同的解除和终止；特别规定；监督检查；法律责任和附则等八章。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 涉及职业安全健康的条款主要有：</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第4条规定，用人单位应当依法建立和完善劳动规章制度，保障劳动者享有劳动权利、履行劳动义务。用人单位在制定、修改或者决定有关劳动安全卫生等直接涉及劳动者切身利益的规章制度或者重大事项时，应当经职工代表大会或者全体职工讨论，提出方案和意见，与工会或者职工代表平等协商确定。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第8条规定，用人单位招用劳动者时，应当如实告知劳动者工作内容、工作条件、工作地点、职业危害、安全生产状况、劳动报酬，以及劳动者要求了解的其他情况；用人单位有权了解劳动者与劳动合同直接相关的基本情况，劳动者应当如实说明。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                第32条规定，劳动者拒绝用人单位管理人员违章指挥、强令冒险作业的，不视为违反劳动合同。劳动者对危害生命安全和身体健康的劳动条件，有权对用人单位提出批评、检举和控告。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第38条规定，用人单位违章指挥、强令冒险作业危及劳动者人身安全的，劳动者可以立即解除劳动合同，不需事先告知用人单位。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                第51条规定，企业职工一方与用人单位通过平等协商，可以就劳动报酬、工作时间、休息休假、劳动安全卫生、保险福利等事项订立集体合同。集体合同草案应当提交职工代表大会或者全体职工讨论通过。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                第76条规定，县级以上人民政府建设、卫生、安全生产监督管理等有关主管部门在各自职责范围内，对用人单位执行劳动合同制度的情况进行监督管理。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;第88条规定，用人单位有违章指挥或者强令冒险作业危及劳动者人身安全的；劳动条件恶劣、环境污染严重，给劳动者身心健康造成严重损害的等情形之一的，依法给予行政处罚；构成犯罪的，依法追究刑事责任；给劳动者造成损害的，应当承担赔偿责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="消防法"></a><span style="font-size: 8px"><strong>◆</strong></span> <span
+                                    style="font-size: 12px"><strong>消防法</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span> 1998年4月29日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>1998年9月1日实施
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 《消防法》于2008年10月28日进行了修订，修订后的《消防法》于2009年5月1日实施。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                其主要内容包括：总则；火灾预防；消防组织；灭火救援；监督检查；法律责任；附则等七章。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了预防和减少火灾，保护公民人身、公共财产和公民财产的安全，维护公共安全，保障社会主义现代化建设的顺利进行。</p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="突发事件应对法"></a><span style="font-size: 8px"><strong>◆</strong></span><strong>
+                                    <span style="font-size: 12px">突发事件应对法</span></strong>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2007年8月30日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2007年11月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                这部法律是我国第一部规范突发事件应对共同行为的法律。突发事件包括台风、地震、矿难这类突然发生、造成或可能造成严重社会危害的自然灾害以及事故灾害、公共卫生事件和社会安全事件。《突发事件应对法》共70条，分为总则、预防与应急准备、监测与预警、应急处置与救援、事后恢复与重建、法律责任及附则七章。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了作好突发事件应急处置工作，建立健全有效的突发事件预防和应急准备制度，突发事件应对法规定各级政府和政府有关部门应当制定、适时修订应急预案，并严格予以执行。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <a name="刑法"></a><span style="font-size: 8px"><strong>◆</strong></span><strong> <span
+                                        style="font-size: 12px">刑法</span></strong>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>1997年3月14日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>1997年10月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>全国人民代表大会
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                为适应中国经济社会快速发展的新形势，从1997年至今，全国人大常委会已审议通过了9个《刑法》修正案，其中2006年6月29日审议通过的《刑法》修正案（六），对有关安全生产犯罪的条文作出了重要修改和补充。加大了对安全生产违法行为的处罚力度。增加瞒报和谎报生产安全事故，贻误事故抢救罪等。这些修改和补充充分体现了党和国家加强安全生产法制建设，严惩安全生产犯罪的决心。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h2>
+                                <span style="font-size: 14px">主要行政法规</span>
+                            </h2>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="color: #0000cd"><strong><a
+                                                    name="突发事件应急预案管理办法"></a></strong></span><strong><span
+                                                style="font-size: 8px">◆</span></strong></span><strong> <span
+                                            style="font-size: 12px">突发事件应急预案管理办法</span></strong></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="color: #800000">发布时间：</span>2013年10月25日</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="color: #800000">实施时间：</span>2013年10月25日</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="color: #800000">发布单位：</span>国务院</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="color: #800000">摘要：</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="font-size: 14px"><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </span></span>制定本办法的目的是为了规范突发事件应急预案管理，增强应急预案的针对性、实用性和可操作性。</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="font-size: 14px"><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>其内容包括：总则，分类和内容，预案编制，审批、备案和公布，应急演练，评估和修订，培训和宣传教育，组织保障及附则9章34条。</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="font-size: 14px"><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>本办法所称应急预案，是指各级人民政府及其部门、基层组织、企事业单位、社会团体等为依法、迅速、科学、有序应对突发事件，最大程度减少突发事件及其造成的损害而预先制定的工作方案。</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px"><span
+                                            style="font-size: 14px"><span
+                                                style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </span></span>本办法规定，应急预案按照制定主体划分，分为政府及其部门应急预案、单位和基层组织应急预案两大类。</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 12px">&nbsp;</span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px">&nbsp;</span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                        name="铁路安全管理条例"></a></strong></span><strong><span
+                                                    style="font-size: 8px">◆</span></strong></span><strong> <span
+                                                style="font-size: 12px">铁路安全管理条例</span></strong></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px"><span
+                                                style="color: #800000">发布时间：</span>2013年8月17日</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px"><span
+                                                style="color: #800000">实施时间：</span>2014年1月1日</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px"><span
+                                                style="color: #800000">发布单位：</span>国务院</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px"><span
+                                                style="color: #800000">摘要：</span></span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            制定本法的目的是为了加强铁路安全管理，保障铁路运输安全和畅通，保护人身安全和财产安全。</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            其内容包括：总则；铁路建设质量安全；铁路专用设备质量安全；铁路线路安全；铁路运营安全；监督检查；法律责任及附则等8章108条。</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            2004年12月27日国务院公布的《铁路运输安全保护条例》予以废止。</span></span></span>
+                            </p>
+                            <p>
+                                <span style="font-size: 14px"><span style="font-size: 14px"><span
+                                            style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            新条例重点调整了铁路安全管理体制，并对保障铁路建设质量安全、高速铁路安全和铁路运输安全做出了明确规定。其中，受铁路部门机构改革影响，条例中取消部分行政许可项目，同时对高铁距居民小区距离、在动车上抽烟等危害铁路安全行为的处罚有了详细规定。</span></span></span>
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                <span style="font-size: 12px"><span
+                                        style="color: #0000cd"><strong>&nbsp;</strong></span></span>
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="煤矿安全监察条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span><strong> <span
+                                        style="font-size: 12px">煤矿安全监察条例</span></strong>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2000年11月7日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2000年12月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了保障煤矿安全，规范煤矿安全监察工作，保护煤矿职工人身安全和身体健康。主要内容包括煤矿安全监察体制、煤矿安全监察机构及其职责、煤矿安全监察员的职权、煤矿安全监察的主要内容、煤矿事故调查处理的规定以及违法行为应负的法律责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="关于预防煤矿生产安全事故的特别规定"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px">关于预防煤矿生产安全事故的特别规定</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2005年9月3日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2005年9月3日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了及时发现并排除煤矿安全生产隐患，落实煤矿安全生产责任制，预防煤矿生产安全事故发生，保障职工的生命安全和煤矿安全生产。主要内容包括重大安全生产隐患的范围、煤矿行政许可的规定、停产整顿的规定、关闭煤矿的要求、违法行为所应负的法律责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="建设工程安全生产管理条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px"><strong>建设工程安全生产管理条例</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2003年11月24日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2004年2月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本法的目的是为了加强建设工程安全生产监督管理，保障人民群众生命和财产安全。主要内容包括建设单位的安全责任，勘察、设计及工程监理等单位的安全责任、施工单位的安全责任、建设工程安全生产监督管理的规定以及建违法行为应负的法律责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="危险化学品安全管理条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span><strong> <span
+                                        style="font-size: 12px">危险化学品安全管理条例</span></strong>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2002年1月26日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2002年3月15日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                1987年2月17日国务院发布的《化学危险品安全管理条例》同时废止。《条例》明确了关于危险化学品安全管理的基本要求和危险化学品生产、储存、使用、经营、运输、登记过程中安全管理的规定以及违法行为应负的法律责任。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2011年3月2日，国务院公布了修订后的《危险化学品安全管理条例》，将于2011年12月1日起施行。修订后的《条例》除根据机构改革后的新情况重新明确规定了有关部门在危险化学品安全监管方面的职责分工外，主要有以下变化：一是建立了危险化学品使用安全许可制定；二是适当下放了危险化学品经营许可证审批权限；三是为方便托运人办理剧毒化学品道路运输通行证，在办证地点和办证审批时限上作了规定；四是适度放开了危险化学品的内河运输，实行分类管理；五是完善了危险化学品登记和鉴定的相关规定；六是加大了对违法行为的行政处罚力度。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="烟花爆竹安全管理条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span>&nbsp;<span
+                                    style="font-size: 12px">烟花爆竹安全管理条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2006年1月21日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2006年1月21日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 烟花爆竹的生产、经营、运输和燃放，适用本条例。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《条例》规定，对烟花爆竹的生产、经营、运输和举办焰火晚会以及其他大型焰火燃放活动，实行许可证制度。明确了安全生产监督管理部门、公安部门、质量监督检验部门等的职责及烟花爆竹生产、经营、运输企业和焰火晚会以及其他大型焰火燃放活动主办单位的主要负责人的责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="安全生产许可证条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px">安全生产许可证条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2004年1月13日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2004年1月13日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主要内容是明确安全生产许可的对象、实施行政许可的部门以及有关行政许可的监督管理等。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 制定的目的是为了严格规范安全生产条件，进一步加强安全生产监督管理，防止和减少生产安全事故。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                适用范围是矿山企业、建筑施工企业和危险化学品、烟花爆竹、民用爆破器材生产企业。对工矿商贸企业中的这些高危企业实行安全生产许可制度，以有效减少各类事故发生。</p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="color: #0000cd"><span style="font-size: 12px"><strong><a
+                                                name="民用爆炸物品安全管理条例"></a></strong></span></span><span
+                                    style="font-size: 12px"><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px">民用爆炸物品安全管理条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2006年5月10日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2006年9月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                1984年1月16日国务院发布的《中华人民共和国民用爆炸物品管理条例》同时废止。民用爆炸物品，是指用于非军事目的、列入民用爆炸物品品名表的各类火药、炸药及其制品和雷管、导火索等点火、起爆器材。民用爆炸物品的生产、销售、购买、进出口、运输、爆破作业和储存以及硝酸铵的销售、购买，适用本《条例》。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="color: #0000cd"><span style="font-size: 12px"><strong><a
+                                                name="特种设备安全监察条例"></a></strong></span></span><span
+                                    style="font-size: 12px"><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px">特种设备安全监察条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2003年3月21日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2003年6月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1982年国务院发布的《锅炉压力容器安全监察暂行条例》同时废止。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本条例所称特种设备是指涉及生命安全、危险性较大的锅炉、压力容器（含气瓶）、压力管道、电梯、起重机械、客运索道、大型游乐设施。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2009年1月24日，国务院公布了《关于修改〈特种设备安全监察条例〉的决定》。于2009年5月1日起施行。这次修改的主要内容：一是根据节能减排的要求，增加高耗能特种设备节能管理的规定；二是适应特种设备事故调查的实际需要，增加特种设备事故分级和调查的相关制度；三是按照行政许可便民高效的原则，将国务院特种设备安全监督管理部门行使的部分行政许可权下放给省、自治区、直辖市特种设备安全监督管理部门；四是将场（厂）内专用机动车辆、移动式压力容器充装、特种设备无损检测的安全监察明确纳入条例调整范围，鼓励实行特种设备责任保险；五是进一步完善法律责任，加大对违法行为的处罚力度。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="农业机械安全监督管理条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span>&nbsp;<span
+                                    style="font-size: 12px"><strong>农业机械安全监督管理条例</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2009年9月17日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2009年11月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                制定本条例的目的是为了加强农业机械安全监督管理，预防和减少农业机械事故，保障人民生命和财产安全。本条例所称农业机械，是指用于农业生产及其产品初加工等相关农事活动的机械、设备。凡在中国从事农业机械的生产、销售、维修、使用操作以及安全监督管理等活动，都应当遵守本条例。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="国务院关于特大安全事故行政责任追究的规定"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px"><strong>国务院关于特大安全事故行政责任追究的规定</strong></span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2001年4月21日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2001年4月21日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                这是我国第一部专门规范各级人民政府和有关部门安全事故行政责任追究的行政法规。这部行政法规的核心，是建立了事故行政责任追究法律制度。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                特大安全事故行政责任追究的范围为下列7类事故：特大火灾事故，特大交通安全事故，特大建筑质量安全事故、民用爆炸物品和化学危险品特大安全事故，煤矿和其他矿山特大安全事故，特种设备特大安全事故，其他特大安全事故。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                对中小学校违法组织学生从事接触易燃、易爆、有毒、有害等危险品的劳动或者其他危险性劳动的，要按学校隶属关系追究县、乡（镇）人民政府主要领导人和同级政府教育行政部门负责人和学校校长的行政责任。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="color: #0000cd"><span style="font-size: 12px"><strong><a
+                                                name="工伤保险条例"></a></strong></span></span><span
+                                    style="font-size: 12px"><strong><span
+                                            style="font-size: 8px">◆</span></strong></span> <span
+                                    style="font-size: 12px">工伤保险条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2003年4月27日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2004年1月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                是我国第一部有关工伤保险的专门行政法规，其内容包括：总则；工伤保险基金；工伤认定；劳动能力鉴定；工伤保险待遇；监督管理；法律责任；附则等八章。制定目的是为了保障因工作遭受事故伤害或者患职业病的职工获得医疗救治和经济补偿，促进工伤预防和职业康复，分散用人单位的工伤风险。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                条例规定中国境内的各类企业、有雇工的个体工商户都应当依照本条例参加工伤保险，为本单位全部职工或者雇工缴纳工伤保险费，并对工伤保险有关待遇作出了明确规定。</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2010年12月8日国务院对《工伤保险条例》作了重大修改：一是扩大了工伤保险的适用范围；二是简化了工伤认定、鉴定和争议处理程序；三是提高了部分工伤待遇标准；四是减少了由用人单位支付的待遇项目，增加了由工伤保险基金支付的待遇项目。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;</p>
+                            <h3>
+                                <span style="font-size: 12px"><span style="color: #0000cd"><strong><a
+                                                name="生产安全事故报告和调查处理条例"></a></strong></span><strong><span
+                                            style="font-size: 8px">◆</span></strong></span>&nbsp;<span
+                                    style="font-size: 12px">生产安全事故报告和调查处理条例</span>
+                            </h3>
+                            <p>
+                                <span style="color: #800000">发布时间：</span>2007年4月9日
+                            </p>
+                            <p>
+                                <span style="color: #800000">实施时间：</span>2007年6月1日
+                            </p>
+                            <p>
+                                <span style="color: #800000">发布单位：</span>国务院
+                            </p>
+                            <p>
+                                <span style="color: #800000">摘要：</span>
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                其内容包括：总则；事故报告；事故调查；事故处理；法律责任；附则等六章。制定本条例的目的是为了加强生产安全事故的报告和调查处理，落实生产安全事故责任追究制度，防止和减少生产安全事故。
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                凡是生产经营活动中发生的人身伤亡或造成较大经济损失的生产安全事故的报告和调查处理，适用本条例；环境污染事故、核设施事故、国防科研生产事故的报告和调查处理不适用本条例。</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mycol-md-4 col-sm-5 col-xs-12 margin-top-10 padding-md-left-5 addwen">
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">相关信息</div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="./index.html" class="tit">网址导航</a>
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">法律法规</a>
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">管理机构</a>
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">统计信息</a>
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">中国批准的国际劳工公约</a>
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">主要报刊</a>
+
+                        </li>
+                        <li>
+                            <a href="./info1.html" class="tit">相关机构网址</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

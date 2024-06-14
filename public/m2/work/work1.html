@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="nav-box">
+            <div class="container">
+                <div class="nav text-center" id="navMenu">
+                    <ul>
+                        <li data-id="22"><a href="../index.html">首页</a></li>
+                        <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                        <li data-id="210"><a href="../work/index.html">工作活动</a></li>
+                        
+                        
+                        
+                        <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                    </ul>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='210']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='210']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='210']").addClass("active");
+        });
+        var topcolumId = "210";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10 padding-bottom-30">
+        <div class="row">
+            <div class="mycol-md-8 col-sm-7 col-xs-12  padding-md-right-5">
+                <div class="cbw">
+                    <div style="width:100%;; height:19px; float:left; text-align:right; padding-top:10px;">
+                        发布时间：2011-10-13&nbsp;&nbsp;&nbsp;&nbsp;
+                        责任编辑【佚名】</div>
+                    <div class="cbw_Bbt">
+                        <div class="cbw_zjym">
+                            <p style="text-align: center">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; 1992年，由芬兰政府资助的ILO／FINNIDA项目在亚太地区20个国家进行，其中包括：中国、印度、泰国、越南等。项目的主要目的是：
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                通过政府、雇主组织、工会组织以及其他非政府组织开展本国的职业安全卫生信息基础工作；促进各部门职业安全卫生工作的开展以及建立国家职业安全卫生信息网。</p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 该项目主要通过以下活动加强职业安全卫生管理工作：</p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （1）创办亚太地区职业安全卫生网络，并连接到国际互联网国际劳工组织职业安全卫生情报中心（ILO-CIS Centers）上；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （2）建立国家职业安全卫生信息政策；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （3）在负责职业安全卫生工作和活动的政府部门，研究机构，及企、事业单位中建立国家级和地区性网络；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （4）逐步建立新的职业安全卫生信息部门，加强现有的信息基础工作，积极的促进信息传播；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （5）出版《亚太地区职业安全卫生通讯》；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （6）开发亚太地区职业安全卫生信息网站点，并在一些特定领域开发一些大家感兴趣的，使用又很方便的数据库；</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp; （7）编辑职业安全卫生机构名录。、</p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp; 此项目执行期间，ILO-CIS中国国家中心开展了以下工作：</p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <span style="color: #6699cc"><span style="font-size: 12px"><strong>◆
+                                            职业安全卫生信息网络研讨、信息系统培训工作</strong></span></span>
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1993年11月8
+                                -10日，ILO／FINNIDA项目组、劳动部职业安全卫生监察局及ILO-CIS中国国家中心共同合作举办了首次中国职业安全卫生信息网络研讨会。参加本次研讨会的代表来自政府部门、研究机构、大专院校、工会组织和雇主组织。此次研讨会主要讨论在中国建立职业安全卫生信息网络，加强全社会在职业安全卫生领域的协作，实现职业安全卫生信息资源共享，最终服务于全社会，减少工伤事故与职业病，改善劳动者的工作条件。与会代表经过讨论，制订了中国职业安全卫生信息网的宗旨和原则，即：及时、有效、方便地为政府部门、工会组织、雇主组织和有关单位提供职业安全卫生信息，实现职业安全卫生信息资源的社会共享，促进中国的职业安全卫生工作。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1994年4月1日，由ILO/FINNIDA项目组与ILO-CIS中国国家中心共同组织的第二次中国职业安全卫生信息网络研讨会在北京召开。本次研讨会主要介绍了ILO/FINNIDA亚太区域职业安全卫生项目提供的数据库软件。目的在于通过数据库示例的演示及与会代表的上机操作，建立起网员名录，把各网员拥有的职业安全卫生信息资源整合起来，实现资源共享。
+                            </p>
+                            <p>
+                                &nbsp;</p>
+                            <p style="text-align: center">
+                                <img alt="" src="../images/120529103531578.jpg"
+                                    style="width: 300px; height: 225px">
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;
+                                1994年10月10-12日，由ILO/FINNIDA项目组与ILO-CIS中国国家中心共同组织的第三次中国职业安全卫生信息网络研讨会在北京举行。参加会议的代表来自政府部门、研究机构、工会组织、大专院校等30家单位。会上介绍了ILO-CIS总部和ILO-CIS中国国家中心的概况；分析了中国职业安全卫生信息工作现状，交流了各行业、各部门对职业安全卫生信息需求的状况；讨论并修改了本中心编写的职业安全卫生信息需求调查表；研究并制定了中国职业安全卫生信息工作的发展战略。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1999年9月14-17日，国际劳工组织、国际劳工组织北京局和ILO-CIS中国国家中心共同举办了“职业安全卫生信息系统培训班”，来自ILO-CIS中国国家中心及其分中心从事职业安全卫生信息工作的人员参加了本次培训。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <img alt="" src="../images/120529104200468.jpg"
+                                    style="width: 320px; float: left; height: 242px; margin-left: 15px; margin-right: 15px"><img
+                                    alt="" src="../images/120529104038125.jpg"
+                                    style="width: 320px; float: right; height: 242px; margin-left: 15px; margin-right: 15px">
+                            </p>
+                            <p style="text-align: center">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                            <p style="text-align: center">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;
+                                2000年7月11-14日，国际劳工组织、国际劳工组织北京局和ILO-CIS中国国家中心共同举办了“职业安全卫生信息系统高级培训班”。这次培训班与1999年9月培训班的内容有所不同，本期重点是培训中国职业安全卫生信息系统的培训师，目的是使这些培训师利用现有的职业安全卫生信息资源，特别是国际互联网，发展信息系统和完善服务。ILO-CIS中国国家中心及全国总工会职业安全卫生信息培训中心，煤炭安全信息与培训中心，建设部，卫生部及青岛职业安全卫生研究所等有关单位的人员参加了这次培训。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <span style="color: #6699cc"><span style="font-size: 12px"><strong>◆
+                                            编写中国化工安全机构指南&nbsp;&nbsp;</strong></span></span>
+                            </p>
+                            <p style="text-align: justify">
+                                <span style="color: #6699cc"><span style="font-size: 12px"><strong><img alt=""
+                                                src="../images/120529104347484.jpg"
+                                                style="width: 100px; float: right; height: 136px; margin-left: 10px; margin-right: 10px"></strong></span></span>
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                1998年10月至1999年10月，ILO-CIS中国国家中心参与了ILO／FINNIDA项目的二期工作，编辑了《中国化工安全机构指南（中、英文版）》。本指南介绍了中国化工安全机构的概况，可供政府官员、进出口商、化学品的制造商和供应商、雇主代表和雇员代表、教育部门、国际组织以及研究机构及使用化学品的有关人员使用。旨在加强各部门的信息交流，有助于在作业场所采取预防措施，防止化学危害。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <ul>
+                                <li style="text-align: justify" value="21">
+                                    <span style="color: #6699cc"><span style="font-size: 12px"><strong><strong>◆
+                                                </strong>建立中国职业安全卫生信息网站</strong></span></span>
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;
+                                1998年底，在ILO／FINNIDA项目的支持和国际劳工组织职业安全卫生专家PiaMarkkanen女士帮助下，建立了“中国职业安全卫生信息网”（中、英文版，网址：<a
+                                    href="http://www.cis-safety-inf.org.cnorwww.chinasafety.ac.cn/">www.cis-safety-inf.org.cnorwww.chinasafety.ac.cn</a>）。该网站开设了国际劳工组织及ILO-CIS中国国家中心专栏，主要介绍了劳工简讯、劳工公约与建议书、职业安全卫生实用规程、ILO-CIS概况、ILO-CIS中国国家中心简介及其业务范围、出版物及职业安全卫生信息以及有关机构的友情链接等。目前，该网站还在不断建设中。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <ul>
+                                <li style="text-align: justify" value="21">
+                                    <span style="color: #6699cc"><span style="font-size: 12px"><strong><strong>◆
+                                                </strong>传播职业安全卫生信息</strong></span></span>
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp; &nbsp;ILO-CIS中国国家中心作为亚太区域职业安全卫生信息网络的成员之一，积极地参与了亚太区域职业安全卫生信息传播的各项活动。<span
+                                    style="display: none">&nbsp;</span></p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <span style="color: #800000"><strong>&nbsp;&nbsp; </strong>《亚太地区职业安全卫生通讯》</span><span
+                                    style="display: none">&nbsp;</span>是由国际劳工组织和芬兰职业卫生研究所共同出版的期刊。从1994年第一期创办以来，一直通过ILO-CIS中国国家中心免费发送到我国有关政府部门、科研单位、大专院校、职业安全卫生机构、工会组织和企业等。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <strong><span style="color: #800000">&nbsp;&nbsp;&nbsp; </span></strong><span
+                                    style="color: #800000">《中国职业安全卫生信息简报》</span>是由ILO-CIS中国国家中心在ILO／FINNIDA项目实施期间编辑出版的，向全国各地及时通报了该项目的最新信息及中国职业安全卫生信息网络建设的进展情况。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                <strong><span style="color: #800000">&nbsp;&nbsp;&nbsp; </span></strong><span
+                                    style="color: #800000">《〈安全生产周〉特刊》</span>是ILO-CIS中国国家中心为配合“国家安全生产周”工作编辑出版的专刊。其内容涉及：全国安全生产情况通报，各国举办安全年、月、周活动简介，全国安全月、周活动回顾，介绍国内外重特大典型事故等内容。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <ul>
+                                <li style="text-align: justify" value="21">
+                                    <span style="color: #6699cc"><span style="font-size: 12px"><strong><strong>◆
+                                                </strong>参加国际会议</strong></span></span>
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;
+                                1989年10月24-27日，ILO-CIS中国国家中心的代表杨乃莲女士参加了在日内瓦举办的化学品安全信息传播培训班。来自中国、澳大利亚、泰国、斯里兰卡、印度等国家的代表参加了此次培训。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;
+                                1995年11月20-22日，ILO-CIS中国国家中心的代表向征女士参加了在曼谷召开的亚太地区国家职业安全卫生信息网规划协商会议。来自中国、澳大利亚、泰国、蒙古、斯里兰卡、印度等14个国家的代表参加了此次会议。会议就职业安全卫生信息网现状及展望、国家职业安全Gopher系统、各国职业安全卫生机构名录编辑等问题进行了讨论，并通过了亚太地区职业安全卫生信息网建设及未来发展的宣言。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;
+                                1996年11月26-28日，ILO-CIS中国国家中心代表杨乃莲女士出席参加了在越南召开的国家职业安全卫生信息网负责人或项目负责人的年会，来自11个国家的14名代表参加了会议。本次会议对ILO／FINNIDA项目一期工作做了总结。
+                            </p>
+                            <p style="text-align: justify">
+                                &nbsp;</p>
+                            <p style="text-align: justify">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000年6月20-21日，第38届ILO-CIS国家中心年会在爱尔兰召开，来自30多个ILO-CIS国家中心的代表参加了会议。在项目的资助下，ILO-CIS中国国家中心的孙连捷先生和杨乃莲女士出席了本次年会。
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mycol-md-4 col-sm-5 col-xs-12 margin-top-10 padding-md-left-5 addwen">
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">工作活动</div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="./index.html" class="tit">项目</a>
+                            <span class="date">Projects</span>
+                        </li>
+                        <li>
+                            <a href="./index.html" class="tit">宣传活动</a>
+                            <span class="date">Activities</span>
+                        </li>
+                        <li>
+                            <a href="./index.html" class="tit">会议</a>
+                            <span class="date">Meetings</span>
+                        </li>
+                        <li>
+                            <a href="./index.html" class="tit">出版物</a>
+                            <span class="date">Publications</span>
+                        </li>
+                        <li>
+                            <a href="./index.html" class="tit">杂志</a>
+                            <span class="date">Magazines</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-gray index-xinxidaodu">
+
+                    <div class="index-yaowen">快速链接 <a class="more" href="../quick/index.html">更多>></a> </div>
+
+                    <ul class="newslist">
+
+                        <li>
+                            <a href="../quick/quick1.html" class="tit">国际劳工组织</a>
+                            <span class="date">ILO</span>
+                        </li>
+                        <li>
+                            <a href="../quick/quick1.html" class="tit">国际劳工组织工作安全局</a>
+                            <span class="date">ILO SafeWork</span>
+                        </li>
+                        <li>
+                            <a href="../quick/index.html" class="tit">国际职业安全卫生信息中心</a>
+                            <span class="date">ILO-CIS</span>
+                        </li>
+                        <li>
+                            <a href="../quick/quick1.html" class="tit">国际劳工组织北京局</a>
+                            <span class="date">ILO Beijing Office</span>
+                        </li>
+                        <li>
+                            <a href="../quick/index.html" class="tit">世界卫生组织</a>
+                            <span class="date">WHO</span>
+                        </li>
+                        <li>
+                            <a href="../quick/quick1.html" class="tit">国际标准化组织</a>
+                            <span class="date">ISO</span>
+                        </li>
+                        <li>
+                            <a href="../quick/index.html" class="tit">国外机构和组织网址</a>
+                            <span class="date">International Organizations</span>
+                        </li>
+                        <li>
+                            <a href="../quick/quick1.html" class="tit">全球职业安全卫生期刊</a>
+                            <span class="date">International Periodicals</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

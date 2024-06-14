@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="container">
+            <div class="row" style="border-bottom: 2px solid #2677e5;">
+                <div class="col-md-5">
+                    <div class="nav text-center" id="navMenu">
+                        <ul>
+                            <li data-id="22"><a href="../index.html">首页</a></li>
+                            <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                            <li data-id="210"><a href="../work/work1.html">工作活动</a></li>
+                            <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="message_container">
+                        <div class="message_notification">
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                            <span>非法违法“小化工”专项整治成效显著</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织希望应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <a class="message_more" href="../message/index.html">更多>></a>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".nav li[data-id='243']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='243']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='243']").addClass("active");
+        });
+        var topcolumId = "243";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10 padding-bottom-20">
+        <div class="row">
+            <div class="cbw">
+                <div class="cbw_Bbt">
+                    <div class="cbw_zjym">
+                        <p>
+                            <span style="font-size: 16px"><strong><img alt="" src="../images/120530134712360.gif"
+                                        style="width: 67px; height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    CIS 通讯</strong></span>
+                        </p>
+                        <p align="center">
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp; <span style="color: #800000"><strong>《CIS通讯（CIS
+                                    Newsletter）》</strong></span>是国际劳工组织职业安全卫生信息中心（ILO-CIS）主办的刊物，由英国CIS国家中心的前负责人Sheila
+                            Pantry女士及工作团队编辑制作。该通讯每月出版一期，以前是以电子邮件的形式进行传播，现在发布到互联网上。</p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            《CIS通讯》不是国际劳工组织（ILO）的正式出版物，但它包含了CIS各国国家中心的职业安全卫生信息以及其他信息资源。这些信息对职业安全健康工作者很有帮助，它使读者能够及时了解各国职业安全卫生工作动态、最新出版物和重要会议以及活动，同时，还可以加强CIS国家中心之间的相互联系。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp; 《CIS通讯》经历了23年的发展，通过CIS网络向154个国家传递着职业安全卫生方面的信息，是了解全球职业安全卫生工作的重要参考资源。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p align="left">
+                            &nbsp;&nbsp;&nbsp; 《CIS通讯》内容包括： ILO最新新闻、CIS信息、来自世界各地的OSH新闻、事件纪要、职业安全卫生与环境网址等。</p>
+                        <p align="left">
+                            &nbsp;</p>
+                        <p>
+                            <strong><span style="color: #800000">&nbsp;&nbsp;&nbsp; 欲想了解详情，请点击：</span></strong><a
+                                href="http://www.sheilapantry.com/cis/index.html"><span
+                                    style="color: #0000cd">http://www.sheilapantry.com/cis/index.html</span></a>
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                href="http://www.sheilapantry.com/oshworld/"><span
+                                    style="color: #0000cd">http://www.sheilapantry.com/oshworld/</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer_msg">
+            <span>相关信息：</span>
+            <a href="../info/index.html" class="tit" target="_blank">网址导航</a>
+            <a href="../info/info1.html" class="tit" target="_blank">法律法规</a>
+            <a href="../info/info1.html" class="tit" target="_blank">管理机构</a>
+            <a href="../info/info1.html" class="tit" target="_blank">统计信息</a>
+            <a href="../info/info1.html" class="tit" target="_blank">中国批准的国际劳工公约</a>
+            <a href="../info/info1.html" class="tit" target="_blank">主要报刊</a>
+            <a href="../info/info1.html" class="tit" target="_blank">相关机构网址</a>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

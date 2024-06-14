@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <div class="bg-header"></div>
+        <div class="container">
+            <div class="row" style="border-bottom: 2px solid #2677e5;">
+                <div class="col-md-5">
+                    <div class="nav text-center" id="navMenu">
+                        <ul>
+                            <li data-id="22"><a href="../index.html">首页</a></li>
+                            <li data-id="216"><a href="../gywm.html">业务范围</a></li>
+                            <li data-id="210"><a href="../work/work1.html">工作活动</a></li>
+                            <li data-id="168"><a href="../contactUs.html">业务联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="message_container">
+                        <div class="message_notification">
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                            <span>非法违法“小化工”专项整治成效显著</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>国际劳工组织希望应对未来的紧急情况</span>&nbsp;&nbsp;&nbsp;
+                            <span>全国消防行业职业技能大赛在江苏南京举行</span>&nbsp;&nbsp;&nbsp;
+                            <span>国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点</span>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <a class="message_more" href="../message/index.html">更多>></a>
+                </div>
+                <div class="mask-bg" id="masgBg"></div>
+                <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // $(".nav li[data-id='216']").addClass("active");
+        var $li = $(".nav li");
+        var $firstLi = $(".nav").children("ul").children("li");
+        var $header = $(".header");
+        $li.mouseenter(function () {
+            $(".nav li[data-id='216']").removeClass("active");
+            $this = $(this);
+            $this.addClass("active").siblings("li").removeClass("active");
+        });
+        $li.mouseleave(function () {
+            $this = $(this);
+            $this.removeClass("active");
+            $(".nav li[data-id='216']").addClass("active");
+        });
+        var topcolumId = "000";
+        var $navToggle = $("#navToggle");
+        var $navMenu = $("#navMenu");
+        var $navItem = $navMenu.find("li");
+        var $masgBg = $("#masgBg");
+        $navToggle.on("click", function () {
+            $masgBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $masgBg.on("click", function () {
+            $masgBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navItem.each(function () {
+            var $this = $(this);
+            if ($this.attr("data-id") == topcolumId) {
+                $this.addClass("active");
+            }
+            if ($this.children("ul").length > 0) {
+                $this.append('<span class="arrow"></span>');
+            }
+        });
+        $navItem.find(".arrow").on("click", function () {
+            var $this = $(this);
+            $this.toggleClass("active");
+            $this.siblings("ul").toggleClass("active");
+        });
+
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        function SetHome(obj) {
+            try {
+                obj.style.behavior = "url(#default#homepage)";
+                obj.setHomePage(obj);
+            }
+            catch (e) {
+                if (window.netscape) {
+                    try { netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); }
+                    catch (e) { alert("抱歉，您所使用的浏览器无法完成此操作。"); }
+                }
+                else {
+                    alert("抱歉，您所使用的浏览器无法完成此操作。");
+                }
+            }
+        }
+        var ssval = "";
+        $(".s-btn").on("click", function () {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                location.href = "/jyxx/?kw=" + $(".s-input").val();
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            ssval = $(".s-input").val();
+            if (ssval != "") {
+                var key = event.which;
+                if (key == 13) {
+                    location.href = "/jyxx/?kw=" + ssval;
+                }
+            }
+        });
+    </script>
+    <div class="container padding-top-10 padding-bottom-20">
+        <div class="row">
+
+            <div class="cbw">
+                <div class="cbw_bt"><a href="../index.html">ILO-CIS中国国家中心</a> → <a href="./index.html">最新消息</a></div>
+                <h2 style="margin-top:10px; text-align:center">国务院安委办、应急管理部部署加强城市安全风险防范工作 确定18个城市（区）作为城市安全风险监测预警建设试点
+                </h2>
+                <hr style=" color:#dddddd; ">
+                <div style="width:700px;; height:19px; float:left; text-align:center; padding-top:10px;">
+                    点击率：3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发表时间：2021/9/26
+                    0:00:00&nbsp;&nbsp;&nbsp;&nbsp;责任编辑【chinasafety】</div>
+
+                <div class="cbw_Bbt">
+                    <div class="cbw_zjym">
+                        <br>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            日前，国务院安委办、应急管理部下发通知，部署加强城市安全风险防范工作，推广城市生命线安全工程经验做法，要求切实提高城市防控重大风险与突发事件的能力，从本质上提升城市安全治理现代化水平。通知确定合肥、沈阳、南京、青岛、深圳、成都、西安、东营、洛阳、宜昌、常德、佛山、南宁、遵义、北京通州、上海浦东新区、上海黄浦、上海松江等18个城市（区）作为国家城市安全风险综合监测预警工作体系建设试点。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            通知指出，当前城市安全新旧风险交织叠加，安全风险防范压力加大，一些城市相继发生房屋坍塌、爆炸、洪涝、台风等重特大事故灾害，城市安全形势复杂严峻。各地区要结合安全发展示范城市创建工作，根据实际统筹开展城市安全风险综合监测预警，积极构建全面统筹领导、统一监测调度、联动响应处置的工作体系。要聚焦城市安全管理的主要问题和突出风险，积极借鉴典型做法，加大试点示范工作力度，将强化城市安全风险防范工作纳入本地区重点工作，充分利用科技手段，加快建立健全城市安全风险综合监测预警工作体系，提升城市安全风险辨识、防范、化解水平。
+                            据悉，国家城市安全风险综合监测预警工作体系建设试点工作，分阶段于2023年3月底前完成，国务院安委办、应急管理部配套制定了城市安全风险综合监测预警平台建设指南，为各地区推进相关工作提供指导。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;为进一步探索总结城市安全风险监测预警新模式新经验，国务院安委办近日在安徽合肥召开城市安全风险监测预警工作现场推进会，总结交流推广城市安全工作经验做法，部署推进城市安全风险监测预警工作。会议要求各地区坚持系统思维，树牢安全红线意识，完善安全责任体系，强化“科技兴安”，加强安全生产法治建设，综合治理、统筹推进，全面提升城市安全发展水平。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row margin-bottom-10">
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c1.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c2.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 padding-10">
+                <a href="../communicate/c3.html" target="_blank">
+                    <div class="info_view">
+                        <img src="../images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer_msg">
+            <span>相关信息：</span>
+            <a href="../info/index.html" class="tit" target="_blank">网址导航</a>
+            <a href="../info/info1.html" class="tit" target="_blank">法律法规</a>
+            <a href="../info/info1.html" class="tit" target="_blank">管理机构</a>
+            <a href="../info/info1.html" class="tit" target="_blank">统计信息</a>
+            <a href="../info/info1.html" class="tit" target="_blank">中国批准的国际劳工公约</a>
+            <a href="../info/info1.html" class="tit" target="_blank">主要报刊</a>
+            <a href="../info/info1.html" class="tit" target="_blank">相关机构网址</a>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/basic.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+
+    <!--导航栏-->
+    <div class="container">
+        <div class="top-news-list"></div>
+        <div class="nav" id="navMenu">
+            <ul>
+                <li data-id="22"><a href="./index.html">简介</a></li>
+                <li data-id="2327"><a href="./xxxsd.html">业务范围</a></li>
+                <li data-id="46"><a href="./work/work1.html">工作活动</a></li>
+                <li data-id="47"><a href="./zsxx.html">相关信息</a></li>
+                <li data-id="222"><a href="./news/3577.html">快速链接</a></li>
+                <li data-id="2304"><a href="./message/index.html">最新消息</a></li>
+                <li data-id="2313"><a href="./gywm.html">业务联系</a></li>
+            </ul>
+        </div>
+        <div class="mask-bg" id="maskBg"></div>
+        <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+    </div>
+
+    <script type="text/javascript">
+        var $navToggle = $("#navToggle");
+        var $maskBg = $("#maskBg");
+        var $navMenu = $("#navMenu");
+
+        $navToggle.on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $maskBg.on("click", function () {
+            $maskBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navMenu.children("ul").find("li").InitNav(22, 22);
+
+        //搜索
+        $(".s-btn").on("click", function () {
+            var keyword = $(this).parents(".ss-box").find(".s-input").val();
+            if (keyword != "") {
+                location.href = "/Search/?kw=" + keyword;
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            var key = event.which;
+            if (key == 13) {
+                var keyword = $(this).parents(".ss-box").find(".s-input").val();
+                if (keyword != "") {
+                    location.href = "/Search/?kw=" + keyword;
+                }
+            }
+        });
+
+    </script>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 margin-bottom-20">
+                    <div class="center_bt"><a href="./index.html">ILO-CIS中国国家中心</a> → 简介</div>
+                    <div class="center_Pc"><a href="#">&nbsp;<img src="./images/-8588850719604619558.gif" width="164"
+                                height="109"></a> &nbsp;&nbsp;&nbsp;<a href="#"><img
+                                src="./images/-8588850719604150808.gif" width="164"
+                                height="109"></a>&nbsp;&nbsp;&nbsp;<a href="#"><img
+                                src="./images/-8588850719603838308.gif" width="164" height="109"></a></div>
+                    <div class="info-content-box">
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;1、1984年5月，劳动人事部劳动保护局与劳动保护科学研究所共同筹建了中国劳动安全卫生情报中心，其宗旨是：通过收集、加工、馆藏和传播国内外职业安全卫生信息，为预防或减少工矿企业工伤事故与职业病，保护劳动者在生产过程中的安全与健康服务；为国家在制定职业安全卫生法律和决策时提供宏观上的服务。中国劳动安全卫生情报中心于1987年被ILO-CIS正式接纳为成员单位，ILO-CIS在其出版的《劳动安全卫生通讯》（1988年第一期）上作了报道。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            随着形势的发展，国内又相继建立了ILO-CIS中国国家中心的分中心，即：全国总工会职业安全卫生信息与培训中心（1990年）；煤炭安全信息与培训中心（1994年）。</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            在ILO-CIS中国国家中心的建设时期，ILO-CIS总部的J•Takala先生和E•Clevenstine先生曾先后来中心访问，并指导工作。ILO-CIS德国国家中心的专家对ILO-CIS中国国家中心的初期建设也给予了很多帮助。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            经过几年的发展，ILO-CIS中国国家中心藏书已达万余册，其中50%为外文图书（主要是英、俄、日文）。拥有各种期刊720余种，其中外文期刊300余种（主要是英、俄、日、法、德文期刊），中文期刊400余种，中外文摘刊物近20种。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            2、1991年5月，根据劳动部决定，以劳动部机关图书馆、劳动保护科学研究所情报室、劳动科学研究所情报室、劳动工资研究所资料室、国际劳工研究所资料室等单位的书刊文献资源、情报业务和部分人员为基础，组建劳动部劳动情报文献中心。该中心对外联络名称仍为ILO-CIS中国国家中心。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;随着机构的变化和办公地址由西坝河迁移至惠新西街，新的中心已拥有近2000平方米的工作场所，其中包括阅览室、地下书库等。馆藏图书、文献、期刊约10万册，包括中外文图书3万余册，中外文期刊千余种，法规、标准、会议资料、科研报告等数万件；ILO-CIS劳动安全卫生信息缩微平片数千张及CD-ROM阅读系统和缩微平片阅读复制系统。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp; 3、1996年，劳动部劳动情报文献中心与国际劳工研究所合并更名为国际劳工与信息研究所，ILO-CIS中国国家中心对外联系名称和业务不变。</p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            4、1998年，由于政府机构改革，将国际劳工与信息研究所内设的“安全卫生情报室”和“编译报导咨询室”合并到新组建的国家经贸委安全科学技术研究中心，作为该中心的信息室。主要负责组织和参与国内外职业安全卫生信息交流合作与传播工作；收集、加工及馆藏国内外职业安全卫生方面的各类文献、国际劳工组织有关职业安全卫生文献和国际劳工标准等资料。对外名称仍为ILO-CIS中国国家中心，并负责与ILO-CIS总部的联络工作等。
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            5、随着我国安全生产管理机构的变化，国家经贸委安全科学技术研究中心，又隶属于国家安全生产监督管理部门。2005年，安全科学技术研究中心更名为中国安全生产科学研究院。信息部是中国安全生产科学研究院的一个业务部门，对外名称仍为ILO-CIS中国国家中心。&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 margin-bottom-20">
+                    <div class="headline">
+                        <span>最新消息</span>
+                        <a href="./message/index.html">更多 >></a>
+                    </div>
+                    <ul class="messages-list">
+                        <li>
+                            <a href="./message/msg1.html" target="_blank" class="card1">全国消防行业职业技能大赛在江苏南京举行</a>
+                        </li>
+                        <li>
+                            <a href="./message/msg1.html" target="_blank" class="card1">国务院安委办、应急管理部部署加强城市安全风险防范工作
+                                确定18个城市（区）作为城市安全风险监测预警建设试点</a>
+                        </li>
+                        <li>
+                            <a href="./message/msg1.html" target="_blank" class="card1">非法违法“小化工”专项整治成效显著</a>
+                        </li>
+                        <li>
+                            <a href="./message/msg1.html" target="_blank"
+                                class="card1">国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况</a>
+                        </li>
+                        <li>
+                            <a href="./message/msg1.html" target="_blank" class="card1">国际劳工组织希望应对未来的紧急情况</a>
+                        </li>
+                    </ul>
+                    <div class="headline">
+                        <span>快速链接 Quick links</span>
+                    </div>
+                    <ul class="home-news-list">
+                        <li>
+                            <a href="./news/3577.html" target="_blank" class="card1">国际劳工组织</a>
+                            <span>ILO</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">国际劳工组织工作安全局</a>
+                            <span>ILO SafeWork</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">国际职业安全卫生信息中心</a>
+                            <span>ILO-CIS</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">国际劳工组织北京局</a>
+                            <span>ILO Beijing Office</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">世界卫生组织</a>
+                            <span>WHO</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">国际标准化组织</a>
+                            <span>ISO</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">国外机构和组织网址</a>
+                            <span>International Organizations</span>
+                        </li>
+                        <li>
+                            <a href="./news/3576.html" target="_blank" class="card1">全球职业安全卫生期刊</a>
+                            <span>International Periodicals</span>
+                        </li>
+                    </ul>
+                    <div class="headline">
+                        <span>相关信息 Related information</span>
+                    </div>
+
+                    <ul class="home-news-list">
+                        <li data-id="2297"><a href="./zsxx.html" target="_blank" class="card1">网站导航</a></li>
+                        <li data-id="2301"><a href="./flfg.html" target="_blank" class="card1">法律法规</a></li>
+                        <li data-id="3326"><a href="./flfg.html" target="_blank" class="card1">管理机构</a></li>
+                        <li data-id="3327"><a href="./flfg.html" target="_blank" class="card1">统计信息</a></li>
+                        <li data-id="3328"><a href="./flfg.html" target="_blank" class="card1">中国批准的国际劳工公约</a></li>
+                        <li data-id="3329"><a href="./flfg.html" target="_blank" class="card1">主要报刊</a></li>
+                        <li data-id="3330"><a href="./flfg.html" target="_blank" class="card1">相关机构网址</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 15,
+            slidesPerGroup: 1,
+            autoplay: true,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.index-swiperImg .swiper-button-next',
+                prevEl: '.index-swiperImg .swiper-button-prev',
+            },
+            breakpoints: {
+                810: {
+                    slidesPerView: 3,
+                },
+                468: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+        $(function () {
+            var $tab_titles = $(".tab-titles");
+            var $tab_contents = $(".tab-contents");
+            var widthss = $(window).width();
+            $(window).resize(function () {
+                widthss = $(window).width();
+            })
+
+            $tab_titles.each(function (i) {
+                var $this = $(this);
+                $this.find("li").each(function (w) {
+                    var $thisli = $(this);
+                    if (widthss < 999) {
+                        $thisli.click(function () {
+                            $thisli.addClass("select").siblings().removeClass("select");
+                            $tab_contents.eq(i).find(".tabcts").eq(w).show().siblings().hide();
+                        })
+                    }
+                    if (widthss > 1000) {
+                        $thisli.mouseover(function () {
+                            $thisli.addClass("select").siblings().removeClass("select");
+                            $tab_contents.eq(i).find(".tabcts").eq(w).show().siblings().hide();
+                        })
+                    }
+                })
+            })
+
+        })
+    </script>
+
+    <div class="container">
+        <div class="row margin-bottom-20">
+            <div class="col-md-4">
+                <a href="./communication/c1.html">
+                    <div class="info_view">
+                        <img src="./images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communication/c2.html">
+                    <div class="info_view">
+                        <img src="./images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communication/c3.html">
+                    <div class="info_view">
+                        <img src="./images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script type="text/javascript">
+        //友情链接
+        $(".footerClickUl>li").click(function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).find(".footerClick-content").slideUp();
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(this).find(".footerClick-content").slideDown();
+                $(this).siblings().find(".footerClick-content").slideUp();
+            }
+            return false;
+        })
+        $(document).click(function () {
+            $(".footerClickUl>li").removeClass("active");
+            $(".footerClickUl>li").find(".footerClick-content").slideUp();
+        });
+        $(".footerClick-content").click(function () {
+            event.stopPropagation();
+        })
+
+        var _hmt = _hmt || [];
+        $("#floatNavToggle").on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+
+        //手机端置顶
+        $goToTop = $('#goToTops');
+        $goToTop.click(function () {
+            $('html ,body').animate({ scrollTop: 0 }, 300);
+            return false;
+        });
+
+        //隐藏go to top按钮
+        $goToTop = $('#goToTop');
+        $(function () {
+            $goToTop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $goToTop.fadeIn();
+
+                } else {
+                    $goToTop.fadeOut();
+                }
+            });
+            $goToTop.click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 300);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

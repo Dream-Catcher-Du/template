@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/basic.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+
+    <!--导航栏-->
+    <div class="container">
+        <div class="top-news-list"></div>
+        <div class="nav" id="navMenu">
+            <ul>
+                <li data-id="22"><a href="../index.html">简介</a></li>
+                <li data-id="2327"><a href="../xxxsd.html">业务范围</a></li>
+                <li data-id="46"><a href="../work/work1.html">工作活动</a></li>
+                <li data-id="47"><a href="../zsxx.html">相关信息</a></li>
+                <li data-id="222"><a href="../news/3577.html">快速链接</a></li>
+                <li data-id="2304"><a href="./index.html">最新消息</a></li>
+                <li data-id="2313"><a href="../gywm.html">业务联系</a></li>
+            </ul>
+        </div>
+        <div class="mask-bg" id="maskBg"></div>
+        <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+    </div>
+
+    <script type="text/javascript">
+        var $navToggle = $("#navToggle");
+        var $maskBg = $("#maskBg");
+        var $navMenu = $("#navMenu");
+
+        $navToggle.on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $maskBg.on("click", function () {
+            $maskBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navMenu.children("ul").find("li").InitNav(2304);
+
+        //搜索
+        $(".s-btn").on("click", function () {
+            var keyword = $(this).parents(".ss-box").find(".s-input").val();
+            if (keyword != "") {
+                location.href = "/Search/?kw=" + keyword;
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            var key = event.which;
+            if (key == 13) {
+                var keyword = $(this).parents(".ss-box").find(".s-input").val();
+                if (keyword != "") {
+                    location.href = "/Search/?kw=" + keyword;
+                }
+            }
+        });
+
+    </script>
+
+    <div class="container">
+
+        <div class="row">
+            <!-- <div class="col-md-9"> -->
+                <div class="center">
+                    <div class="cbw_list">
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">
+                                    全国消防行业职业技能大赛在江苏南京举行
+                                </span>
+                            </a>
+                            <span>【 2021/11/26 0:00:00】</span>
+                            <br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                全国消防行业职业技能大赛近日在江苏南京举行，此次大赛由应急管理部、人力资源和社会保障部、中华全国总工会、共青团中央共同举办，主题为“向胜利而行
+                                为人民而战”,是国家级一类职业技能大赛，国家综合性消防救援队伍、政府（企业）专职消防队、社会救援力量和消防从业人员均可参赛，是全行业、全社会广泛参与的竞技比...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">国务院安委办、应急管理部部署加强城市安全风险防范工作
+                                    确定18个城市（区）作为城市安全风险监测预警建设试点</span>
+                            </a>
+                            <span>【
+                                2021/9/26
+                                0:00:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                日前，国务院安委办、应急管理部下发通知，部署加强城市安全风险防范工作，推广城市生命线安全工程经验做法，要求切实提高城市防控重大风险与突发事件的能力，从本质上提升城市安全治理现代化水平。通知确定合肥、沈阳、南京、青岛、深圳、成都、西安、东营、洛阳、宜昌、常德、佛山、南宁、遵义、北京通州、上海浦东新区、...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">非法违法“小化工”专项整治成效显著</span>
+                            </a>
+                            <span>【 2021/8/26 18:00:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                为认真贯彻落实习近平总书记关于安全生产的重要指示精神，自2020年8月以来，国务院安委会部署各地开展了为期一年的非法违法“小化工”专项整治工作，持续推进危险化学品安全专项整治三年行动深入开展，提升危险化学品本质安全水平。
+                                专项整治工作开展一年来，各地强化组织领导，压实各级责任，加强部...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">
+                                    国际劳工组织呼吁建立有复原力的职业安全与健康体系，以应对未来的紧急情况</span>
+                            </a>
+                            <span>【
+                                2021/4/28 19:30:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                日内瓦（国际劳工组织新闻）——国际劳工组织（ILO）在世界职业安全与健康日发布的一份报告中称，各国需要建立健全的、有复原力的职业安全与健康体系，以便在未来发生紧急健康情况时，将劳动世界中每个人的风险降至最低。
+                                这将需要对职业安全与健康基础设施进行投资，并将其纳入国家整体危机应急计划，以保护工...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">携手共建更加健全的职业安全与健康体系</span>
+                            </a>
+                            <span>【 2021/4/28 0:00:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                2019冠状病毒疫情凸显了构建健全、有复原力的国家职业安全与健康体系之重要性。为纪念2021世界职业卫生与健康日，国际劳工组织中国和蒙古局代理局长戴晓初介绍了构建健全、有复原力的国家职业安全与健康体系的理念和需采取的措施。
+                                新冠病毒给工作场所、工人、社区都造成了严峻的感染风险。此外，为减轻病...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">应急管理部部署加强年底安全风险防范
+                                    通报四类生产安全高风险项目企业</span>
+                            </a>
+                            <span>【 2020/11/20
+                                16:06:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                临近年底，各地区生产经营活动集中，极易出现赶工期、抢进度和突击生产、超负荷运转等问题，安全生产形势严峻复杂。为加强年底安全风险防范，进一步明确安全监管和风险防控重点，根据典型事故特点和事故企业存在的突出共性问题，应急管理部要求各地应急管理部门在监管检查中要重点关注四类安全生产高风险项目企业。
+                                一...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">国务院安委会办公室部署集中开展冬春火灾防控</span>
+                            </a>
+                            <span>【 2020/11/17 17:09:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                国务院安委会办公室近日印发通知，聚焦消防安全领域突出风险，明确冬春火灾防控五大重点任务，决定从2020年11月至2021年3月在全国集中开展冬春火灾防控工作。
+                                冬春季历来是火灾高发尤其是重特大火灾多发季节，入秋以来气温逐渐转冷，群众用火用电用气集中，致灾因素增多。据统计，近十年冬春季火灾总量、亡...</a>
+
+                        </div>
+
+                        <div class="wsd_list">
+                            <a href="./msg1.html" target="_blank">
+                                <span style="color:#1561af; font-weight:bold; font-size:14px;">应急管理部在京举办外交政策与国际救援规则培训班</span>
+                            </a>
+                            <span>【 2020/11/4 12:10:00】</span><br>
+                            <a class="wsd_list_msg" href="./msg1.html" target="_blank">
+                                日前，应急管理部在国家地震紧急救援训练基地举办外交政策与国际救援规则培训班，来自全国消防救援队伍、森林消防队伍，矿山（隧道）和危险化学品专业救援队伍等单位的58名指挥管理骨干参加了培训。
+                                本次培训班旨在提高参训人员跨国（境）救援组织指挥和管理能力，课程设计紧贴跨国（境）救援任务要求，重点围绕我国...</a>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row margin-bottom-20">
+            <div class="col-md-4">
+                <a href="../communication/c1.html">
+                    <div class="info_view">
+                        <img src="../images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../communication/c2.html">
+                    <div class="info_view">
+                        <img src="../images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../communication/c3.html">
+                    <div class="info_view">
+                        <img src="../images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <script type="text/javascript">
+        //友情链接
+        $(".footerClickUl>li").click(function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).find(".footerClick-content").slideUp();
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(this).find(".footerClick-content").slideDown();
+                $(this).siblings().find(".footerClick-content").slideUp();
+            }
+            return false;
+        })
+        $(document).click(function () {
+            $(".footerClickUl>li").removeClass("active");
+            $(".footerClickUl>li").find(".footerClick-content").slideUp();
+        });
+        $(".footerClick-content").click(function () {
+            event.stopPropagation();
+        })
+
+        var _hmt = _hmt || [];
+        $("#floatNavToggle").on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+
+        //手机端置顶
+        $goToTop = $('#goToTops');
+        $goToTop.click(function () {
+            $('html ,body').animate({ scrollTop: 0 }, 300);
+            return false;
+        });
+
+        //隐藏go to top按钮
+        $goToTop = $('#goToTop');
+        $(function () {
+            $goToTop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $goToTop.fadeIn();
+
+                } else {
+                    $goToTop.fadeOut();
+                }
+            });
+            $goToTop.click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 300);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

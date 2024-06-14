@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ILO-CIS中国国家中心</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="PageAdmin CMS" data-url="http://www.pageadmin.net" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/basic.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-news-list"></div>
+        <div class="nav" id="navMenu">
+            <ul>
+                <li data-id="22"><a href="./index.html">简介</a></li>
+                <li data-id="2327"><a href="./xxxsd.html">业务范围</a></li>
+                <li data-id="46"><a href="./work/work1.html">工作活动</a></li>
+                <li data-id="47"><a href="./zsxx.html">相关信息</a></li>
+                <li data-id="222"><a href="./news/3577.html">快速链接</a></li>
+                <li data-id="2304"><a href="./message/index.html">最新消息</a></li>
+                </li>
+                <li data-id="2313"><a href="./gywm.html">业务联系</a></li>
+            </ul>
+        </div>
+        <div class="mask-bg" id="maskBg"></div>
+        <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span>
+    </div>
+
+    <script type="text/javascript">
+        var $navToggle = $("#navToggle");
+        var $maskBg = $("#maskBg");
+        var $navMenu = $("#navMenu");
+
+        $navToggle.on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+        $maskBg.on("click", function () {
+            $maskBg.removeClass("active");
+            $navMenu.removeClass("active");
+        });
+        $navMenu.children("ul").find("li").InitNav(2313, 2313);
+
+        //搜索
+        $(".s-btn").on("click", function () {
+            var keyword = $(this).parents(".ss-box").find(".s-input").val();
+            if (keyword != "") {
+                location.href = "/Search/?kw=" + keyword;
+            }
+        });
+        $(".s-input").on("keydown", function (event) {
+            var key = event.which;
+            if (key == 13) {
+                var keyword = $(this).parents(".ss-box").find(".s-input").val();
+                if (keyword != "") {
+                    location.href = "/Search/?kw=" + keyword;
+                }
+            }
+        });
+
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="center">
+                    <div class="center_bt"><a href="./index.html">ILO-CIS中国国家中心 → </a><a href="./index.html">业务联系</a>
+                    </div>
+                    <div class="center_Bbt">
+                        <div class="center_Pc"><a href="#">&nbsp;<img src="./images/-8588849512575505973.jpg"
+                                    width="164" height="109"></a> &nbsp;&nbsp;&nbsp;<a href="#"><img
+                                    src="./images/-8588849512575349723.jpg" width="164"
+                                    height="109"></a>&nbsp;&nbsp;&nbsp;<a href="#"><img
+                                    src="./images/-8588849512575193473.jpg" width="164" height="109"></a></div>
+                        <div class="Ej">
+                            <div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    联系部门： ILO-CIS中国国家中心</div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    联&nbsp; 系&nbsp; 人： 杨乃莲</div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    联系电话： 010-64897065</div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    传真号码： 010-64897065</div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    E &nbsp;-&nbsp; mail： &nbsp;<a
+                                        href="mailto:ynl@cis-safety-inf.org.cn">ynl@cis-safety-inf.org.cn</a></div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    网　　址： <a href="http://www.chinasafety.ac.cn/">www.chinasafety.ac.cn</a></div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    通讯地址： 北京市朝阳区北苑路32号院甲1号楼安全大厦</div>
+                                <div
+                                    style="line-height: 150%; text-indent: 10.5pt; margin: 6pt 0cm; layout-grid-mode: char">
+                                    邮政编码： 100012</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="headline">
+                    <span>快速链接 Quick links</span>
+                </div>
+                <ul class="home-news-list">
+                    <li>
+                        <a href="./news/3577.html" class="card1">国际劳工组织</a>
+                        <span>ILO</span>
+                    </li>
+                    <li>
+                        <a href="./news/3576.html" class="card1">国际劳工组织工作安全局</a>
+                        <span>ILO SafeWork</span>
+                    </li>
+                    <li>
+                        <a href="./news/3577.html" class="card1">国际职业安全卫生信息中心</a>
+                        <span>ILO-CIS</span>
+                    </li>
+                    <li>
+                        <a href="./news/3576.html" class="card1">国际劳工组织北京局</a>
+                        <span>ILO Beijing Office</span>
+                    </li>
+                    <li>
+                        <a href="./news/3577.html" class="card1">世界卫生组织</a>
+                        <span>WHO</span>
+                    </li>
+                    <li>
+                        <a href="./news/3576.html" class="card1">国际标准化组织</a>
+                        <span>ISO</span>
+                    </li>
+                    <li>
+                        <a href="./news/3577.html" class="card1">国外机构和组织网址</a>
+                        <span>International Organizations</span>
+                    </li>
+                    <li>
+                        <a href="./news/3576.html" class="card1">全球职业安全卫生期刊</a>
+                        <span>International Periodicals</span>
+                    </li>
+                </ul>
+                <script type="text/javascript">
+                    var $subNav = $("#subNav");
+                    $subNav.children("ul").find("li").InitNav(2321);//初始化响应式菜单
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row margin-bottom-20">
+            <div class="col-md-4">
+                <a href="./communication/c1.html">
+                    <div class="info_view">
+                        <img src="./images/120530134712360.gif" style="width: 60px;height: 60px;" />
+                        <span>通讯 newsletters</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communication/c2.html">
+                    <div class="info_view">
+                        <img src="./images/-8588849414072224723.jpg" />
+                        <span>世界职业安全健康日</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="./communication/c3.html">
+                    <div class="info_view">
+                        <img src="./images/-8588849416087693473.jpg" />
+                        <span>职业安全卫生百科全书</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <script type="text/javascript">
+        //友情链接
+        $(".footerClickUl>li").click(function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).find(".footerClick-content").slideUp();
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(this).find(".footerClick-content").slideDown();
+                $(this).siblings().find(".footerClick-content").slideUp();
+            }
+            return false;
+        })
+        $(document).click(function () {
+            $(".footerClickUl>li").removeClass("active");
+            $(".footerClickUl>li").find(".footerClick-content").slideUp();
+        });
+        $(".footerClick-content").click(function () {
+            event.stopPropagation();
+        })
+
+        var _hmt = _hmt || [];
+        $("#floatNavToggle").on("click", function () {
+            $maskBg.addClass("active");
+            $navMenu.addClass("active");
+        });
+
+        //手机端置顶
+        $goToTop = $('#goToTops');
+        $goToTop.click(function () {
+            $('html ,body').animate({ scrollTop: 0 }, 300);
+            return false;
+        });
+
+        //隐藏go to top按钮
+        $goToTop = $('#goToTop');
+        $(function () {
+            $goToTop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $goToTop.fadeIn();
+
+                } else {
+                    $goToTop.fadeOut();
+                }
+            });
+            $goToTop.click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 300);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
