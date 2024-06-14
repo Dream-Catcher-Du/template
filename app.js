@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80;
 
 // 开放所有文件
-app.use('/public', express.static('public'))
+app.use('/public', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!');
 })
 
 app.listen(port, () => {
